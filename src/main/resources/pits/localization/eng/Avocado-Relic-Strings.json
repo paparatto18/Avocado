@@ -1,0 +1,72 @@
+{
+	"AvocadoCharacter:PlaceholderRelic2": {
+		"NAME": "Placeholder Relic 2",
+		"FLAVOR": "You feel stronger.",
+		"DESCRIPTIONS": [
+			"At the start of each combat, gain +1 Strength."
+		]
+	},
+	"Shell": {
+		"NAME": "Carapace",
+		"FLAVOR": "Your armor is appealing.",
+		"DESCRIPTIONS": [
+			"Start each combat with #b2 #yPlated #yArmor."
+		]
+	},
+	"MarkOfNausea": {
+		"NAME": "Mark of Nausea",
+		"FLAVOR": "This brand is used to signify parasites who have mastered nausea.",
+		"DESCRIPTIONS": [
+			"Gain #b1 Energy at the start of your turn. At the start of combat, shuffle #b3 #ySlimeds into your draw pile."
+		]
+	},
+	"SuckDummy": {
+		"NAME": "Suck Dummy",
+		"FLAVOR": "It's been sucked on",
+		"DESCRIPTIONS": [
+			"Whenever you heal HP during combat, heal #b2 additional HP "
+		]
+	},
+	"TwistedTendril": {
+		"NAME": "Twisted Tendril",
+		"FLAVOR": "It stretches and twists interminably, searching for anything to grab on to.",
+		"DESCRIPTIONS": [
+			"At the start of each combat, apply #b3 #yConstricted to ALL enemies."
+		]
+	},
+	"NonNewtonianFlesh": {
+		"NAME": "Non-Newtonian Flesh",
+		"FLAVOR": "\"Most curious! It appears to gain enormous viscosity upon being struck!\" - Ranwid",
+		"DESCRIPTIONS": [
+			"If you lost HP during the previous turn, gain #bBlock equal to half your #yPlated #yArmor at the start of your turn."
+		]
+	},
+	"GreenSkull": {
+		"NAME": "Green Skull",
+		"FLAVOR": "A small skull collected from fallen ascenders.",
+		"DESCRIPTIONS": [
+			"While your HP is at or below #b50%, you have #b3 additional #yPlated #yArmor."
+		]
+	},
+	"PitOfFury": {
+		"NAME": "Pit of Fury",
+		"FLAVOR": "This seed is just so angry.",
+		"DESCRIPTIONS": [
+			"Whenever you lose HP, gain #b2 temporary #yStrength."
+		]
+	},
+	"PreservedParasite": {
+		"NAME": "Preserved Parasite",
+		"FLAVOR": "The parasite seems to create a shrinking aura that targets particularly normal enemies.",
+		"DESCRIPTIONS": [
+			"Enemies in non-elite and non-boss encounters have #b20% less HP"
+		]
+	},
+	"StartCodon": {
+		"NAME": "Start Codon",
+		"FLAVOR": "This piece of genetic information tells the avocado to just \'go\'.",
+		"DESCRIPTIONS": [
+			"Start each combat with #b1 additional [E] for each #yInnate card in your deck"
+		]
+	}
+}

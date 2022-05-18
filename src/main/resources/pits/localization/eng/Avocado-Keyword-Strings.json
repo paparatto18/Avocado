@@ -1,0 +1,30 @@
+{
+  "KEYWORD": {
+    "NAMES": [
+      "keyword",
+      "keywords",
+      "Keyword",
+      "Keywords",
+      "Keyword:"
+    ],
+    "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
+  },
+
+  "PEEL": {
+    "NAMES": [
+      "Peel",
+      "peel",
+      "Peel:",
+      "peel:"
+    ],
+    "DESCRIPTION": "Lose #yPlated #yArmor to activate effect. You cannot peel if you do not have enough #yPlated #yArmor."
+  },
+  "CONSTRICTED": {
+    "NAMES": [
+      "Constricted",
+      "constricted"
+    ],
+    "DESCRIPTION": "Constricted enemies take damage equal to their #yConstricted at the end of their turn."
+  }
+}
+

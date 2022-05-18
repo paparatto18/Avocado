@@ -1,0 +1,131 @@
+{
+	"AvocadoCharacter:NoHealPower": {
+        "NAME": "No Heal",
+        "DESCRIPTIONS": ["This target may not heal for ", " turns."]
+	},
+	"AvocadoCharacter:FuzzyPower": {
+        "NAME": "Fuzzy Plans",
+        "DESCRIPTIONS": ["Retain the rightmost ", " cards."]
+	},
+	"AvocadoCharacter:SadisticMindPower": {
+        "NAME": "Sadistic Mind",
+        "DESCRIPTIONS": ["Every time you apply a debuff, draw ", " cards."]
+	},
+	"AvocadoCharacter:CubicMayhemPower": {
+        "NAME": "Cubic Mayhem",
+        "DESCRIPTIONS": ["Adds an additional ", " Mayhem each turn." ]
+	},
+	"AvocadoCharacter:MalleablePlayer": {
+        "NAME": "Malleable",
+        "DESCRIPTIONS": [
+        	"On taking #yAttack damage, gains #b",
+      		" #yBlock. #yBlock gain increases as ",
+      		" is triggered. Resets at the start of your turn."
+		]
+	},
+	"AvocadoCharacter:WhimsyPower": {
+        "NAME": "Whimsy Power",
+        "DESCRIPTIONS": ["Whenever you exhaust a card, add ", " random cards to your draw pile."]
+	},
+	"GrowthPower": {
+		"NAME": "Growth",
+		"DESCRIPTIONS": ["Gain ", " Strength next turn."]
+	},
+	"DelayedAttack": {
+		"NAME": "Delayed Attack",
+		"DESCRIPTIONS": [
+			"At the end of %1$s rounds, deal %2$s damage.",
+			"At the end of this round, deal %1$s damage.",
+			"At the end of %1$s rounds, lose %2$s health.",
+			"At the end of this round, lose %1$s health."
+		]
+	},
+	"MucousEmbrace": {
+		"NAME": "Mucous Embrace",
+		"DESCRIPTIONS": [
+			"Whenever a #yStatus card is #yExhausted, draw #b1 card.",
+			"Whenever a #yStatus card is #yExhausted, draw #b",
+			" cards."
+		]
+	},
+	"OrichalcumPower": {
+		"NAME": "Orichalcum",
+		"DESCRIPTIONS": [
+			"If you end your turn without #yBlock, gain ",
+			" #yBlock."
+		]
+	},
+	"Reabsorb": {
+		"NAME": "Reabsorb",
+		"DESCRIPTIONS": [
+			"Whenever a #yStatus card is #yExhausted, gain ",
+			" #yStrength"
+		]
+	},
+	"FeelNoGunk": {
+		"NAME": "Feel No Gunk",
+		"DESCRIPTIONS": [
+			"Whenever a #yStatus card is #yExhausted, gain ",
+			" #yBlock"
+		]
+	},
+	"Goorruption": {
+		"NAME": "Goorruption",
+		"DESCRIPTIONS": [
+			"#yStatus cards cost #b0 and can be played. Whenever you play a #yStatus card, #yExhaust it."
+		]
+	},
+	"Ratrops": {
+		"NAME": "Ratrops",
+		"DESCRIPTIONS": [
+			"Whenever you are attacked, apply #b",
+			" #yVulnerable to the attacker."
+		]
+	},
+	"Electroplating": {
+		"NAME": "Electroplating",
+		"DESCRIPTIONS": [
+			"Whenever you gain #yPlated #yArmor, gain ",
+			" more."
+		]
+	},
+	"Strangulation": {
+		"NAME": "Strangulation",
+		"DESCRIPTIONS": [
+			"Whenever you apply #yConstricted, apply an additional ",
+			" #yConstricted."
+		]
+	},
+	"AvocadoCharacter:ParasiticForm": {
+		"NAME": "Parasitic",
+		"DESCRIPTIONS": [
+			"On losing HP, gains #b",
+			" #yBlock. #yBlock gain increases by #b",
+			" each time HP is lost."
+		]
+	},
+	"OverripePower": {
+		"NAME": "Overripe",
+		"DESCRIPTIONS": [
+			"At the start of your turn, lose #b",
+			" #yStrength"
+		]
+	},
+	"Savagery": {
+		"NAME": "Savagery",
+		"DESCRIPTIONS": [
+			"At the start of your turn, lose #b",
+			" HP and reduce the cost of a random card in your hand to #b0 for the turn.",
+			"At the start of your turn, lose #b",
+			" HP and reduce the cost of #b",
+			" cards in your hand to #b0 for the turn."
+		]
+	},
+	"Ensnare": {
+		"NAME": "Ensnare",
+		"DESCRIPTIONS": [
+			"Whenever you receive unblocked attack damage, apply #b",
+			" #yConstricted to the attacker."
+		]
+	}
+}
