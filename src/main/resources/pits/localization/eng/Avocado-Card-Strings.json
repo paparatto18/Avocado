@@ -112,6 +112,10 @@
     "NAME": "Heavy Slam",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each *Plated *Armor you have."
   },
+  "AvocadoCharacter:Autophagia": {
+    "NAME": "Autophagia",
+    "DESCRIPTION": "Receive !D! damage. NL If Fatal, raise your Max HP by !M!. NL Exhaust."
+  },
   "AvocadoCharacter:Growth": {
     "NAME": "Growth",
     "DESCRIPTION": "Next turn, NL Gain !M! Strength."

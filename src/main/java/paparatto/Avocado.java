@@ -151,14 +151,7 @@ public class Avocado implements
         BaseMod.addRelicToCustomPool(new StartCodon(), AbstractCardEnum.AVOCADO_GREEN);
 
 
-        new AutoAdd("DefaultCharacter")
-                .packageFilter(CustomRelic.class)
-                .any(CustomRelic.class, (info, relic) -> {
-                    BaseMod.addRelicToCustomPool(relic, AbstractCardEnum.AVOCADO_GREEN);
-                    if (info.seen) {
-                        UnlockTracker.markRelicAsSeen(relic.relicId);
-                    }
-                });
+
     }
 
     // ================ /ADD RELICS/ ===================
@@ -194,6 +187,7 @@ public class Avocado implements
         BaseMod.addCard(new PerfectedSuck());
         BaseMod.addCard(new OnePitWonder());
         BaseMod.addCard(new HeavySlam());
+        BaseMod.addCard(new Autophagia());
 
 
         BaseMod.addCard(new ParasiticShell());
@@ -241,11 +235,6 @@ public class Avocado implements
         BaseMod.addCard(new Savagery());
         BaseMod.addCard(new Ensnare());
 
-
-        new AutoAdd("AvocadoCharacter")
-                .packageFilter(AbstractAvocadoCharacterCard.class)
-                .setDefaultSeen(true)
-                .cards();
 
 
     }
