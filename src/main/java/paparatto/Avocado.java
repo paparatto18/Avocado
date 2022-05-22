@@ -188,6 +188,7 @@ public class Avocado implements
         BaseMod.addCard(new OnePitWonder());
         BaseMod.addCard(new HeavySlam());
         BaseMod.addCard(new Autophagia());
+        BaseMod.addCard(new Scavenger());
 
 
         BaseMod.addCard(new ParasiticShell());
@@ -200,7 +201,6 @@ public class Avocado implements
         BaseMod.addCard(new EatShell());
         BaseMod.addCard(new Harden());
         BaseMod.addCard(new Overblock());
-        // BaseMod.addCard(new ExoskeletonSlam());
         BaseMod.addCard(new Wrap());
         BaseMod.addCard(new PittedArmor());
         BaseMod.addCard(new SowDoubt());
@@ -211,13 +211,15 @@ public class Avocado implements
         BaseMod.addCard(new Necrosis());
         BaseMod.addCard(new EatScrap());
         BaseMod.addCard(new Encapsulate());
-        BaseMod.addCard(new StunSpore());
+//        BaseMod.addCard(new StunSpore());
         BaseMod.addCard(new BagOfPits());
         BaseMod.addCard(new Phosphorylation());
         BaseMod.addCard(new Phototropism());
         BaseMod.addCard(new Suffocate());
         BaseMod.addCard(new FleshBarrier());
         BaseMod.addCard(new SlimyShield());
+        BaseMod.addCard(new Reclaim());
+        BaseMod.addCard(new ShellSmash());
 
 
         BaseMod.addCard(new BalancedDiet());
@@ -234,6 +236,7 @@ public class Avocado implements
         BaseMod.addCard(new ParasiticForm());
         BaseMod.addCard(new Savagery());
         BaseMod.addCard(new Ensnare());
+        BaseMod.addCard(new Recombination());
 
 
 

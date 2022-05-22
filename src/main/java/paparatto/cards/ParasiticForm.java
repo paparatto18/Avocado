@@ -9,7 +9,7 @@ import paparatto.powers.ParasiticFormPower;
 
 public class ParasiticForm extends AbstractAvocadoCharacterCard {
 
-    public static final String ID = Avocado.makeID("ParasiticForm");
+    public static final String ID = Avocado.makeID("Parasitic_Form");
 
     private static final CardRarity RARITY = CardRarity.RARE; // COMMON, UNCOMMON, RARE, SPECIAL
     private static final CardTarget TARGET = CardTarget.SELF;  // ENEMY, ALL_ENEMY, SELF, NONE, SELF_AND_ENEMY, ALL

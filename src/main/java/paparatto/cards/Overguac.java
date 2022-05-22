@@ -22,8 +22,8 @@ public class Overguac extends AbstractAvocadoCharacterCard {
     public Overguac() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseMagicNumber = 2;
-        magicNumberUp = 1;
+        baseMagicNumber = 3;
+        magicNumberUp = -1;
         magicNumber = baseMagicNumber;
 
     }
@@ -31,7 +31,7 @@ public class Overguac extends AbstractAvocadoCharacterCard {
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
-            if (AbstractDungeon.player.getPower("Plated Armor").amount >= 2) {
+            if (AbstractDungeon.player.getPower("Plated Armor").amount >= this.magicNumber) {
                 this.glowColor = AbstractCard.GREEN_BORDER_GLOW_COLOR.cpy();
             }
         }
@@ -40,9 +40,9 @@ public class Overguac extends AbstractAvocadoCharacterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
-            if (AbstractDungeon.player.getPower("Plated Armor").amount >= 2) {
-                act(new ReducePowerAction(p,p, "Plated Armor", 2));
-                act(new DrawCardAction(p, this.magicNumber));
+            if (AbstractDungeon.player.getPower("Plated Armor").amount >= this.magicNumber) {
+                act(new ReducePowerAction(p,p, "Plated Armor", this.magicNumber));
+                act(new DrawCardAction(p, 3));
             }
         }
     }

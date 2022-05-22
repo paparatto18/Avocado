@@ -30,7 +30,7 @@ public class Extractor extends AbstractAvocadoCharacterCard {
     public Extractor() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseDamage = 4;
+        baseDamage = 3;
         damageUp = 1;
         this.exhaust = true;
 

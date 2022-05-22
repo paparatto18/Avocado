@@ -22,8 +22,8 @@ public class Suckamid extends AbstractAvocadoCharacterCard {
     public Suckamid() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseMagicNumber = 8;
-        magicNumberUp = 4;
+        baseMagicNumber = 7;
+        magicNumberUp = 3;
         magicNumber = baseMagicNumber;
         this.exhaust = true;
         this.tags.add(CardTags.HEALING);

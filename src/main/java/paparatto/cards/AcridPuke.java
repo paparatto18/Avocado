@@ -28,7 +28,7 @@ public class AcridPuke extends AbstractAvocadoCharacterCard {
     public AcridPuke() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseMagicNumber = 2;
+        baseMagicNumber = 1;
         magicNumberUp = 1;
         exhaust = true;
         this.cardsToPreview = new Slimed();

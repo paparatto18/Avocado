@@ -116,6 +116,10 @@
     "NAME": "Autophagia",
     "DESCRIPTION": "Receive !D! damage. NL If Fatal, raise your Max HP by !M!. NL Exhaust."
   },
+  "AvocadoCharacter:Scavenger": {
+    "NAME": "Scavenger",
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, Reclaim 2 cards."
+  },
   "AvocadoCharacter:Growth": {
     "NAME": "Growth",
     "DESCRIPTION": "Next turn, NL Gain !M! Strength."
@@ -135,7 +139,7 @@
   },
   "AvocadoCharacter:Overguac": {
     "NAME": "Overguac",
-    "DESCRIPTION": "Peel 2: NL Draw !M! cards."
+    "DESCRIPTION": "Peel !M!: NL Draw 3 cards."
   },
   "AvocadoCharacter:Constrict": {
     "NAME": "Constrict",
@@ -230,6 +234,16 @@
       " NL (Gain !B! Block.)"
     ]
   },
+  "AvocadoCharacter:Reclaim": {
+    "NAME": "Reclaim",
+    "DESCRIPTION": "Gain !B! Block. NL Reclaim !M! card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Reclaim !M! cards."
+  },
+  "AvocadoCharacter:ShellSmash": {
+    "NAME": "Shell Smash",
+    "DESCRIPTION": "Peel ALL: NL Gain [E] and draw 1 card for each 2 *Plated *Armor lost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"Gain [E] and draw 1 card. NL Peel ALL: NL Gain [E] and draw 1 card for each 2 *Plated *Armor lost. NL Exhaust."
+  },
   "AvocadoCharacter:BasicDraw": {
     "NAME": "Basic Draw",
     "DESCRIPTION": "Draw !M! cards."
@@ -237,7 +251,7 @@
   "AvocadoCharacter:BasicEnergy": {
     "NAME": "Basic Energy",
     "DESCRIPTION": "Gain [E] [E] .",
-    "UPGRADED_DESCRIPTION": "Gain [E] [E] [E] ."
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] ."
   },
   "AvocadoCharacter:BasicPower": {
     "NAME": "Basic Power",
@@ -250,7 +264,7 @@
   "AvocadoCharacter:BalancedDiet": {
     "NAME": "Balanced Diet",
     "DESCRIPTION": "Gain !M! Strength, NL !M! Dexterity, and NL !M! *Plated *Armor.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength, !M! Dexterity, and !M! *Plated *Armor."
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength, NL !M! Dexterity, and NL !M! *Plated *Armor."
   },
   "AvocadoCharacter:BasicMetallicize": {
     "NAME": "BasicMetallicize",
@@ -292,7 +306,7 @@
     "NAME": "Strangulation",
     "DESCRIPTION": "Whenever you apply Constricted, apply an additional !M! Constricted."
   },
-  "AvocadoCharacter:ParasiticForm": {
+  "AvocadoCharacter:Parasitic_Form": {
     "NAME": "Parasitic Form",
     "DESCRIPTION": "Ethereal. NL Whenever you lose HP, gain 3 Block and increase this gain by 1.",
     "UPGRADE_DESCRIPTION": "Whenever you lose HP, gain 3 Block and increase this gain by 1."
@@ -304,5 +318,9 @@
   "AvocadoCharacter:Ensnare": {
     "NAME": "Ensnare",
     "DESCRIPTION": "Whenever you receive unblocked attack damage, apply !M! Constricted to the attacker."
+  },
+  "AvocadoCharacter:Recombination": {
+    "NAME": "Recombination",
+    "DESCRIPTION": "At the start of your turn, Reclaim 1 card."
   }
 }

@@ -32,7 +32,7 @@ public class WrapAction extends AbstractGameAction {
     int magicNumber;
     private boolean upgraded = false;
 
-    public WrapAction(AbstractPlayer p, boolean upgraded,boolean freeToPlayOnce, int energyOnUse, int magicNumber) {
+    public WrapAction(AbstractPlayer p, boolean upgraded, boolean freeToPlayOnce, int energyOnUse, int magicNumber) {
 
         this.magicNumber = magicNumber;
         this.p = p;
