@@ -31,11 +31,13 @@ public class ShellSmash extends AbstractAvocadoCharacterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
             if (AbstractDungeon.player.getPower("Plated Armor").amount >= 1) {
-                int count = (int)Math.floor((AbstractDungeon.player.getPower("Plated Armor").amount)/2);
+                int count;
                 if (this.upgraded) {
-                    count ++;
+                    count = (AbstractDungeon.player.getPower("Plated Armor").amount);
+                } else {
+                    count = (int) Math.floor((AbstractDungeon.player.getPower("Plated Armor").amount) / 2);
                 }
-                act(new ReducePowerAction(p,p, "Plated Armor", AbstractDungeon.player.getPower("Plated Armor").amount));
+                act(new ReducePowerAction(p, p, "Plated Armor", AbstractDungeon.player.getPower("Plated Armor").amount));
                 act(new DrawCardAction(count));
                 act(new GainEnergyAction(count));
             }

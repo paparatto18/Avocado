@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import paparatto.Avocado;
 
 public class PlateSnap extends AbstractAvocadoCharacterCard {
@@ -22,12 +23,13 @@ public class PlateSnap extends AbstractAvocadoCharacterCard {
     public PlateSnap() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseDamage = 6;
+        baseDamage = 8;
         damageUp = 1;
         baseMagicNumber = 1;
         magicNumberUp = 1;
         magicNumber = baseMagicNumber;
     }
+
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

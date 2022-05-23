@@ -114,11 +114,11 @@
   },
   "AvocadoCharacter:Autophagia": {
     "NAME": "Autophagia",
-    "DESCRIPTION": "Receive !D! damage. NL If Fatal, raise your Max HP by !M!. NL Exhaust."
+    "DESCRIPTION": "Receive !D! damage. NL If you would die, raise your Max HP by !M!. NL Exhaust."
   },
   "AvocadoCharacter:Scavenger": {
     "NAME": "Scavenger",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, Reclaim 2 cards."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, Reclaim 1 card."
   },
   "AvocadoCharacter:Growth": {
     "NAME": "Growth",
@@ -242,7 +242,7 @@
   "AvocadoCharacter:ShellSmash": {
     "NAME": "Shell Smash",
     "DESCRIPTION": "Peel ALL: NL Gain [E] and draw 1 card for each 2 *Plated *Armor lost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"Gain [E] and draw 1 card. NL Peel ALL: NL Gain [E] and draw 1 card for each 2 *Plated *Armor lost. NL Exhaust."
+    "UPGRADE_DESCRIPTION":"Peel ALL: NL Gain [E] and draw 1 card for each *Plated *Armor lost. NL Exhaust."
   },
   "AvocadoCharacter:BasicDraw": {
     "NAME": "Basic Draw",

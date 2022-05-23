@@ -40,7 +40,9 @@ public class RecombinationPower extends AbstractPower {
     }
 
     public void atStartOfTurnPostDraw() {
-        this.flash();
+        if (this.p.discardPile.size() != 0) {
+            this.flash();
+        }
         this.addToBot(new RandomDiscardCopyAction(this.amount));
     }
 

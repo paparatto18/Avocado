@@ -211,7 +211,7 @@ public class Avocado implements
         BaseMod.addCard(new Necrosis());
         BaseMod.addCard(new EatScrap());
         BaseMod.addCard(new Encapsulate());
-//        BaseMod.addCard(new StunSpore());
+
         BaseMod.addCard(new BagOfPits());
         BaseMod.addCard(new Phosphorylation());
         BaseMod.addCard(new Phototropism());
@@ -228,7 +228,7 @@ public class Avocado implements
         BaseMod.addCard(new MucousEmbrace());
         BaseMod.addCard(new Baseplate());
         BaseMod.addCard(new Reabsorb());
-//        BaseMod.addCard(new FeelNoGunk());
+
         BaseMod.addCard(new Goorruption());
         BaseMod.addCard(new Ratrops());
         BaseMod.addCard(new Electroplating());
@@ -238,8 +238,11 @@ public class Avocado implements
         BaseMod.addCard(new Ensnare());
         BaseMod.addCard(new Recombination());
 
-
-
+//        new AutoAdd("paparatto")
+//                .packageFilter(AbstractAvocadoCharacterCard.class)
+//                .packageFilter("paparatto.cards")
+//                .setDefaultSeen(true)
+//                .cards();
     }
 
     // ================ /ADD CARDS/ ===================

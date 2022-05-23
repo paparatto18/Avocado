@@ -1,5 +1,6 @@
 package paparatto.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.*;
@@ -24,6 +25,8 @@ import paparatto.cards.*;
 import paparatto.patches.*;
 import paparatto.powers.*;
 import paparatto.actions.*;
+
+;
     
 public class BasicBlock extends AbstractAvocadoCharacterCard {
 
@@ -35,11 +38,14 @@ public class BasicBlock extends AbstractAvocadoCharacterCard {
 
     private static final int COST = 1;                          // -1 for X cost, -2 for no cost, 0 and up for regular costs
 
+    ;
+
     public BasicBlock() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
         baseBlock = 9;
         blockUp = 4;
+
     }
 
     @Override
