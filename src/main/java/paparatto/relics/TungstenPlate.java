@@ -2,6 +2,8 @@ package paparatto.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnAnyPowerAppliedRelic;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnReceivePowerRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,7 +15,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import java.util.Iterator;
 
 
-public class TungstenPlate extends CustomRelic {
+public class TungstenPlate extends CustomRelic implements OnReceivePowerRelic {
     public static final String ID = "TungstenPlate";
     private int initialPlate = AbstractDungeon.player.getPower("Plated Armor").amount;
 
@@ -27,15 +29,7 @@ public class TungstenPlate extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.ID.equals("Plated Armor")) {
-            if (AbstractDungeon.player.getPower("Plated Armor").amount < initialPlate) {
 
-
-            }
-
-        }
-    }
 
 
 
@@ -44,4 +38,16 @@ public class TungstenPlate extends CustomRelic {
         return new TungstenPlate();
     }
 
+
+
+    @Override
+    public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature abstractCreature) {
+        return false;
+    }
+
+    @Override
+    public int onReceivePowerStacks(AbstractPower power, AbstractCreature source, int stackAmount) {
+
+        return OnReceivePowerRelic.super.onReceivePowerStacks(power, source, stackAmount);
+    }
 }
