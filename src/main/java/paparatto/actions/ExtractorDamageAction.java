@@ -43,5 +43,6 @@ public class ExtractorDamageAction extends AbstractGameAction {
             }
         }
 
+
     }
 }

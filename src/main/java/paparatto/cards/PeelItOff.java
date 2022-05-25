@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import paparatto.Avocado;
+import paparatto.actions.PeelAction;
 
 public class PeelItOff extends AbstractAvocadoCharacterCard {
 
@@ -42,7 +43,7 @@ public class PeelItOff extends AbstractAvocadoCharacterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
             if (AbstractDungeon.player.getPower("Plated Armor").amount >= 1) {
-                act(new ReducePowerAction(p,p, "Plated Armor", 1));
+                act(new PeelAction(p, 1));
                 act(new GainBlockAction(p, p, this.block));
                 act(new DrawCardAction(p, 1));
             }

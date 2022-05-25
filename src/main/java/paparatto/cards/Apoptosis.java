@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import paparatto.Avocado;
+import paparatto.actions.PeelAction;
 
 public class Apoptosis extends AbstractAvocadoCharacterCard {
 
@@ -43,7 +44,7 @@ public class Apoptosis extends AbstractAvocadoCharacterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
             if (AbstractDungeon.player.getPower("Plated Armor").amount >= this.magicNumber) {
-                act(new ReducePowerAction(p,p, "Plated Armor", this.magicNumber));
+                act(new PeelAction(p, this.magicNumber));
                 act(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
                 act(new DrawCardAction(p, 1));
             }

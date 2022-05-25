@@ -33,5 +33,6 @@ public class LoseRelicAction extends AbstractGameAction {
   {
     AbstractDungeon.player.loseRelic(relicID);
     this.isDone = true;
+
   }
 }

@@ -33,5 +33,6 @@ public class GiveRelicAction extends AbstractGameAction {
   {
     relic.instantObtain();
     this.isDone = true;
+
   }
 }

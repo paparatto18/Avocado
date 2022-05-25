@@ -42,7 +42,7 @@ public class DiscardFromDeckAction extends AbstractGameAction {
       if (tmp.size() == 0)
       {
         this.isDone = true;
-        return;
+
       }
       if (tmp.size() == 1)
       {
@@ -57,7 +57,7 @@ public class DiscardFromDeckAction extends AbstractGameAction {
         AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(card, this.p.drawPile));
 
         this.isDone = true;
-        return;
+
       }
       if (tmp.size() <= this.amount)
       {
@@ -74,7 +74,7 @@ public class DiscardFromDeckAction extends AbstractGameAction {
           AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(card, this.p.drawPile));
         }
         this.isDone = true;
-        return;
+
       }
       if (this.amount == 1) {
         AbstractDungeon.gridSelectScreen.open(tmp, this.amount, "Discard", false);
@@ -82,7 +82,7 @@ public class DiscardFromDeckAction extends AbstractGameAction {
         AbstractDungeon.gridSelectScreen.open(tmp, this.amount, "Discard " + Integer.toString(this.amount) + " cards.", false);
       }
       tickDuration();
-      return;
+
     }
     if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0)
     {
@@ -94,5 +94,6 @@ public class DiscardFromDeckAction extends AbstractGameAction {
       AbstractDungeon.gridSelectScreen.selectedCards.clear();
     }
     tickDuration();
+
   }
 }

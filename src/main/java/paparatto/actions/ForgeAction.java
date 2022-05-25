@@ -71,5 +71,6 @@ public class ForgeAction extends AbstractGameAction {
         }
 
         this.tickDuration();
+
     }
 }

@@ -78,5 +78,6 @@ public class SetCostRandomCardAction extends AbstractGameAction {
       break;
     }
     this.isDone = true;
+
   }
 }

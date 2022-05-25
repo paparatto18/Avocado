@@ -32,6 +32,7 @@ public class RandomDiscardCopyAction extends AbstractGameAction {
 
         this.isDone = true;
 
+
     }
 
 

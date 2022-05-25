@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import paparatto.Avocado;
+import paparatto.actions.PeelAction;
 
 public class DoubleStrike extends AbstractAvocadoCharacterCard {
 
@@ -43,7 +44,7 @@ public class DoubleStrike extends AbstractAvocadoCharacterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
             if (AbstractDungeon.player.getPower("Plated Armor").amount >= 1) {
-                act(new ReducePowerAction(p,p, "Plated Armor", 1));
+                act(new PeelAction(p, 1));
                 act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
                 act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             }

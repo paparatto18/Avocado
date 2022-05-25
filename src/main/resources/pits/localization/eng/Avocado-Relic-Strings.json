@@ -68,5 +68,12 @@
 		"DESCRIPTIONS": [
 			"Start each combat with #b1 additional [E] for each #yInnate card in your deck"
 		]
+	},
+	"TungstenPlate": {
+		"NAME": "Tungsten Plate",
+		"FLAVOR": "It's rly heavy.",
+		"DESCRIPTIONS": [
+			"Reduce all #yPlated #Armor losses due to #yPeel by #b1."
+		]
 	}
 }

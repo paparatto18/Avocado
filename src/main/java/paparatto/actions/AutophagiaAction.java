@@ -48,5 +48,6 @@ public class AutophagiaAction extends AbstractGameAction {
         }
 
         this.tickDuration();
+
     }
 }

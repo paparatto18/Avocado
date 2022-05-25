@@ -149,6 +149,7 @@ public class Avocado implements
         BaseMod.addRelicToCustomPool(new PitOfFury(), AbstractCardEnum.AVOCADO_GREEN);
         BaseMod.addRelicToCustomPool(new PreservedParasite(), AbstractCardEnum.AVOCADO_GREEN);
         BaseMod.addRelicToCustomPool(new StartCodon(), AbstractCardEnum.AVOCADO_GREEN);
+        BaseMod.addRelicToCustomPool(new TungstenPlate(), AbstractCardEnum.AVOCADO_GREEN);
 
 
 
@@ -237,6 +238,8 @@ public class Avocado implements
         BaseMod.addCard(new Savagery());
         BaseMod.addCard(new Ensnare());
         BaseMod.addCard(new Recombination());
+        BaseMod.addCard(new PeelNoPain());
+        BaseMod.addCard(new Shrapnel());
 
 //        new AutoAdd("paparatto")
 //                .packageFilter(AbstractAvocadoCharacterCard.class)

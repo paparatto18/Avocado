@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import paparatto.Avocado;
+import paparatto.actions.PeelAction;
 
 import java.util.Iterator;
 
@@ -42,7 +43,7 @@ public class PeelHook extends AbstractAvocadoCharacterCard {
         act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
             if (AbstractDungeon.player.getPower("Plated Armor").amount >= 1) {
-                act(new ReducePowerAction(p,p, "Plated Armor", 1));
+                act(new PeelAction(p, 1));
                 act(new GainEnergyAction(1));
                 act(new DrawCardAction(p, 1));
             }

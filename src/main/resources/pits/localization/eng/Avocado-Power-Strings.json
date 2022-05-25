@@ -51,7 +51,7 @@
 	"OrichalcumPower": {
 		"NAME": "Orichalcum",
 		"DESCRIPTIONS": [
-			"If you end your turn without #yBlock, gain ",
+			"If you end your turn without #yBlock, gain #b",
 			" #yBlock."
 		]
 	},
@@ -142,6 +142,20 @@
 			"Next turn, add a copy of a random card from your discard pile into your hand.",
 			"Next turn, add a copy of a random card from your discard pile into your hand #b",
 			" times"
+		]
+	},
+	"PeelNoPain": {
+		"NAME": "PeelNoPain",
+		"DESCRIPTIONS": [
+			"Whenever you #yPeel, gain #b",
+			" #yBlock."
+		]
+	},
+	"Shrapnel": {
+		"NAME": "Shrapnel",
+		"DESCRIPTIONS": [
+			"Whenever you #yPeel, deal #b",
+			" Damage to a random enemy."
 		]
 	}
 }

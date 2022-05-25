@@ -229,7 +229,7 @@
   },
   "AvocadoCharacter:SlimyShield": {
     "NAME": "Slimy Shield",
-    "DESCRIPTION": "Gain !M! Block for ALL Status cards, including Exhaust pile.",
+    "DESCRIPTION": "Gain !M! Block for ALL your Status cards, including Exhaust pile.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gain !B! Block.)"
     ]
@@ -322,5 +322,13 @@
   "AvocadoCharacter:Recombination": {
     "NAME": "Recombination",
     "DESCRIPTION": "At the start of your turn, Reclaim 1 card."
+  },
+  "AvocadoCharacter:PeelNoPain": {
+    "NAME": "PeelNoPain",
+    "DESCRIPTION": "Whenever you Peel, gain !M! Block."
+  },
+  "AvocadoCharacter:Shrapnel": {
+    "NAME": "Shrapnel",
+    "DESCRIPTION": "Whenever you Peel, deal !M! Damage to a random enemy."
   }
 }

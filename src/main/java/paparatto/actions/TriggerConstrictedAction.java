@@ -34,5 +34,6 @@ public class TriggerConstrictedAction extends AbstractGameAction {
         }
 
         this.isDone = true;
+
     }
 }

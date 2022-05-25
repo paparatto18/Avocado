@@ -64,5 +64,6 @@ public class WrapAction extends AbstractGameAction {
                 this.p.energy.use(EnergyPanel.totalCount);
         }
         this.isDone = true;
+
     }
 }

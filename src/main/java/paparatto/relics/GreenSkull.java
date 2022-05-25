@@ -37,6 +37,7 @@ public class GreenSkull extends CustomRelic {
                 }
 
                 this.isDone = true;
+
             }
         });
 //        while (this.isActive) {

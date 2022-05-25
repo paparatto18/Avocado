@@ -10,18 +10,18 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ConstrictedPower;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.Iterator;
 
 
-public class TungstenPlate extends CustomRelic implements OnReceivePowerRelic {
+public class TungstenPlate extends CustomRelic {
     public static final String ID = "TungstenPlate";
-    private int initialPlate = AbstractDungeon.player.getPower("Plated Armor").amount;
 
 
     public TungstenPlate() {
-        super(ID, new Texture("pits/images/relics/TwistedTendril.png"),new Texture("pits/images/relics/outline/TwistedTendril.png"), RelicTier.RARE, LandingSound.HEAVY);
+        super(ID, new Texture("pits/images/relics/TungstenPlate.png"), new Texture("pits/images/relics/outline/TungstenPlate.png"), RelicTier.RARE, LandingSound.HEAVY);
     }
 
     @Override
@@ -30,24 +30,8 @@ public class TungstenPlate extends CustomRelic implements OnReceivePowerRelic {
     }
 
 
-
-
-
     @Override
     public AbstractRelic makeCopy() { // always override this method to return a new instance of your relic
         return new TungstenPlate();
-    }
-
-
-
-    @Override
-    public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature abstractCreature) {
-        return false;
-    }
-
-    @Override
-    public int onReceivePowerStacks(AbstractPower power, AbstractCreature source, int stackAmount) {
-
-        return OnReceivePowerRelic.super.onReceivePowerStacks(power, source, stackAmount);
     }
 }
