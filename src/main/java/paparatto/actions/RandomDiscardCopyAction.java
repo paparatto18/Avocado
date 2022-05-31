@@ -14,19 +14,30 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class RandomDiscardCopyAction extends AbstractGameAction {
+
+
+    private boolean freeToPlayOnce;
     private AbstractPlayer p;
 
     public RandomDiscardCopyAction(int amount) {
         this.p = AbstractDungeon.player;
         this.amount = amount;
+    }
+
+    public RandomDiscardCopyAction(int amount, boolean freeToPlayOnce) {
+        this.p = AbstractDungeon.player;
+        this.amount = amount;
+        this.freeToPlayOnce = freeToPlayOnce;
 
     }
 
     public void update() {
         if (this.p.discardPile.size() != 0) {
             for (int i = 0; i < this.amount; ++i) {
-                AbstractCard card = p.discardPile.getRandomCard(AbstractDungeon.cardRandomRng);
-                this.addToBot(new MakeTempCardInHandAction(card.makeStatEquivalentCopy()));
+                AbstractCard card = p.discardPile.getRandomCard(AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
+                card.freeToPlayOnce = freeToPlayOnce;
+                this.addToBot(new MakeTempCardInHandAction(card));
+
             }
         }
 

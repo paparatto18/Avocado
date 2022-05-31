@@ -10,9 +10,14 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import paparatto.actions.PeelAction;
 import paparatto.cards.*;
 import paparatto.characters.AvocadoCharacter;
 import paparatto.patches.*;
@@ -33,7 +38,10 @@ public class Avocado implements
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
-        OnPowersModifiedSubscriber{
+        OnPowersModifiedSubscriber,
+        OnPlayerTurnStartSubscriber,
+        OnStartBattleSubscriber{
+
     public static final Logger logger = LogManager.getLogger(Avocado.class.getName());
 
     //This is for the in-game mod settings panel.
@@ -190,6 +198,8 @@ public class Avocado implements
         BaseMod.addCard(new HeavySlam());
         BaseMod.addCard(new Autophagia());
         BaseMod.addCard(new Scavenger());
+        BaseMod.addCard(new ArmedPit());
+        BaseMod.addCard(new Splinter());
 
 
         BaseMod.addCard(new ParasiticShell());
@@ -212,7 +222,6 @@ public class Avocado implements
         BaseMod.addCard(new Necrosis());
         BaseMod.addCard(new EatScrap());
         BaseMod.addCard(new Encapsulate());
-
         BaseMod.addCard(new BagOfPits());
         BaseMod.addCard(new Phosphorylation());
         BaseMod.addCard(new Phototropism());
@@ -221,6 +230,9 @@ public class Avocado implements
         BaseMod.addCard(new SlimyShield());
         BaseMod.addCard(new Reclaim());
         BaseMod.addCard(new ShellSmash());
+        BaseMod.addCard(new Rummage());
+        BaseMod.addCard(new Spoils());
+
 
 
         BaseMod.addCard(new BalancedDiet());
@@ -229,7 +241,6 @@ public class Avocado implements
         BaseMod.addCard(new MucousEmbrace());
         BaseMod.addCard(new Baseplate());
         BaseMod.addCard(new Reabsorb());
-
         BaseMod.addCard(new Goorruption());
         BaseMod.addCard(new Ratrops());
         BaseMod.addCard(new Electroplating());
@@ -308,4 +319,17 @@ public class Avocado implements
     public void receivePowersModified() {
 
     }
+
+    @Override
+    public void receiveOnPlayerTurnStart() {
+        PeelAction.peelsThisTurn = 0;
+    }
+
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        PeelAction.peelsThisCombat = 0;
+    }
+
+
 }

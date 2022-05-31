@@ -26,17 +26,22 @@ public class PreservedParasite extends CustomRelic {
 
 
     public void atBattleStart() {
-        if (!AbstractDungeon.getCurrRoom().eliteTrigger) {
-            this.flash();
+        boolean isEliteOrBoss = AbstractDungeon.getCurrRoom().eliteTrigger;
 
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if (m.type == AbstractMonster.EnemyType.BOSS) {
+                isEliteOrBoss = true;
+                break;
+            }
+        }
+
+        if (!isEliteOrBoss) {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (m.currentHealth > (int) ((float) m.maxHealth * (1.0F - this.MODIFIER_AMT))) {
                     m.currentHealth = (int) ((float) m.maxHealth * (1.0F - this.MODIFIER_AMT));
                     m.healthBarUpdatedEvent();
                 }
             }
-
-            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         }
 
     }

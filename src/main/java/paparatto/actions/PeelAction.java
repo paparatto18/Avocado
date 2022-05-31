@@ -19,7 +19,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public class PeelAction extends AbstractGameAction {
     private final AbstractPlayer p;
 
-
+    public static int peelsThisTurn;
+    public static int peelsThisCombat;
 
 
     public PeelAction(AbstractPlayer p, int amount) {
@@ -35,6 +36,8 @@ public class PeelAction extends AbstractGameAction {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
             if (AbstractDungeon.player.getPower("Plated Armor").amount >= this.amount) {
                 this.addToBot(new ReducePowerAction(p, p, "Plated Armor", this.amount));
+                peelsThisTurn++;
+                peelsThisCombat++;
 
                 if (AbstractDungeon.player.hasPower("PeelNoPain")) {
                     this.addToBot(new GainBlockAction(p, AbstractDungeon.player.getPower("PeelNoPain").amount));
@@ -44,10 +47,7 @@ public class PeelAction extends AbstractGameAction {
                     this.addToBot(new DamageRandomEnemyAction(new DamageInfo(p, AbstractDungeon.player.getPower("Shrapnel").amount, DamageInfo.DamageType.THORNS), AttackEffect.BLUNT_LIGHT));
                 }
 
-
             }
-
-
         }
         this.isDone = true;
     }

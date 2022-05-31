@@ -16,7 +16,7 @@ public class Apoptosis extends AbstractAvocadoCharacterCard {
 
     public static final String ID = Avocado.makeID("Apoptosis");
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON; // COMMON, UNCOMMON, RARE, SPECIAL
+    private static final CardRarity RARITY = CardRarity.COMMON; // COMMON, UNCOMMON, RARE, SPECIAL
     private static final CardTarget TARGET = CardTarget.SELF;  // ENEMY, ALL_ENEMY, SELF, NONE, SELF_AND_ENEMY, ALL
     private static final CardType TYPE = CardType.SKILL;       // ATTACK, SKILL, POWER
 
@@ -25,8 +25,8 @@ public class Apoptosis extends AbstractAvocadoCharacterCard {
     public Apoptosis() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseMagicNumber = 2;
-        magicNumberUp = -1;
+        baseMagicNumber = 1;
+        magicNumberUp = 1;
         magicNumber = baseMagicNumber;
 
     }
@@ -34,7 +34,7 @@ public class Apoptosis extends AbstractAvocadoCharacterCard {
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
-            if (AbstractDungeon.player.getPower("Plated Armor").amount >= this.magicNumber) {
+            if (AbstractDungeon.player.getPower("Plated Armor").amount >= 1) {
                 this.glowColor = AbstractCard.GREEN_BORDER_GLOW_COLOR.cpy();
             }
         }
@@ -43,9 +43,15 @@ public class Apoptosis extends AbstractAvocadoCharacterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
-            if (AbstractDungeon.player.getPower("Plated Armor").amount >= this.magicNumber) {
-                act(new PeelAction(p, this.magicNumber));
-                act(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
+            if (AbstractDungeon.player.getPower("Plated Armor").amount >= 1) {
+                act(new PeelAction(p, 1));
+                act(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 1), 1));
+                if (this.upgraded){
+                    if (AbstractDungeon.player.getPower("Plated Armor").amount >= 1) {
+                        act(new PeelAction(p, 1));
+                        act(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 1), 1));
+                    }
+                }
                 act(new DrawCardAction(p, 1));
             }
         }

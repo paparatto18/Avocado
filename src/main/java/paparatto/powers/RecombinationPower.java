@@ -2,10 +2,14 @@
 package paparatto.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -36,15 +40,13 @@ public class RecombinationPower extends AbstractPower {
         } else {
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
-
     }
 
-    public void atStartOfTurnPostDraw() {
-        if (this.p.discardPile.size() != 0) {
-            this.flash();
-        }
-        this.addToBot(new RandomDiscardCopyAction(this.amount));
-    }
 
+    public void atStartOfTurn() {
+        this.flash();
+        this.addToBot(new RandomDiscardCopyAction(1));
+
+    }
 
 }

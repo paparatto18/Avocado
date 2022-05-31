@@ -120,6 +120,14 @@
     "NAME": "Scavenger",
     "DESCRIPTION": "Deal !D! damage. NL Next turn, Reclaim 1 card."
   },
+  "AvocadoCharacter:ArmedPit": {
+    "NAME": "Armed Pit",
+    "DESCRIPTION": "Deal !D! damage. NL If you have Peeled this turn, gain [E] [E] ."
+  },
+  "AvocadoCharacter:Splinter": {
+    "NAME": "Splinter",
+    "DESCRIPTION": "Peel 1 and deal !D! damage for each *Plated *Armor you have. NL Exhaust."
+  },
   "AvocadoCharacter:Growth": {
     "NAME": "Growth",
     "DESCRIPTION": "Next turn, NL Gain !M! Strength."
@@ -139,7 +147,7 @@
   },
   "AvocadoCharacter:Overguac": {
     "NAME": "Overguac",
-    "DESCRIPTION": "Peel !M!: NL Draw 3 cards."
+    "DESCRIPTION": "Peel !M!: NL Draw 2 cards."
   },
   "AvocadoCharacter:Constrict": {
     "NAME": "Constrict",
@@ -184,7 +192,8 @@
   },
   "AvocadoCharacter:Apoptosis": {
     "NAME": "Apoptosis",
-    "DESCRIPTION": "Peel !M!: Gain !M! *Plated *Armor and draw 1 card."
+    "DESCRIPTION": "Peel 1: Gain 1 *Plated *Armor and draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Peel 1 twice: Gain 1 *Plated *Armor twice and draw 1 card."
   },
   "AvocadoCharacter:Compost": {
     "NAME": "Compost",
@@ -193,7 +202,7 @@
   },
   "AvocadoCharacter:Necrosis": {
     "NAME": "Necrosis",
-    "DESCRIPTION": "Lose 6 HP. NL Gain !M! *Plated *Armor. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Vulnerable. NL Gain 6 *Plated *Armor. NL Exhaust."
   },
   "AvocadoCharacter:EatScrap": {
     "NAME": "Eat Scrap",
@@ -225,7 +234,7 @@
   },
   "AvocadoCharacter:FleshBarrier": {
     "NAME": "Flesh Barrier",
-    "DESCRIPTION":  "Gain !B! Block. Gains 1 fewer block for each *Plated *Armor you have."
+    "DESCRIPTION":  "Gain !B! Block. Gains 1 fewer Block for each *Plated *Armor you have."
   },
   "AvocadoCharacter:SlimyShield": {
     "NAME": "Slimy Shield",
@@ -243,6 +252,19 @@
     "NAME": "Shell Smash",
     "DESCRIPTION": "Peel ALL: NL Gain [E] and draw 1 card for each 2 *Plated *Armor lost. NL Exhaust.",
     "UPGRADE_DESCRIPTION":"Peel ALL: NL Gain [E] and draw 1 card for each *Plated *Armor lost. NL Exhaust."
+  },
+  "AvocadoCharacter:Rummage": {
+    "NAME": "Rummage",
+    "DESCRIPTION": "Reclaim 1 card. NL It costs 0 until played. Exhaust."
+  },
+  "AvocadoCharacter:Spoils": {
+    "NAME": "Spoils of War",
+    "DESCRIPTION": "Choose 1 of 3 skills of any color to add into your hand. It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"Choose 1 of 3 skills of any color to add into your hand. It costs 0 until played."
+  },
+  "AvocadoCharacter:PeeledShield": {
+    "NAME": "Peeled Shield",
+    "DESCRIPTION": "Costs 1 less [E] for each time you have Peeled this combat. NL Gain !B! Block."
   },
   "AvocadoCharacter:BasicDraw": {
     "NAME": "Basic Draw",
@@ -324,7 +346,7 @@
     "DESCRIPTION": "At the start of your turn, Reclaim 1 card."
   },
   "AvocadoCharacter:PeelNoPain": {
-    "NAME": "PeelNoPain",
+    "NAME": "Peel No Pain",
     "DESCRIPTION": "Whenever you Peel, gain !M! Block."
   },
   "AvocadoCharacter:Shrapnel": {

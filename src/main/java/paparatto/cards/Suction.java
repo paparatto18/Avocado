@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GiantTextEffect;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import paparatto.Avocado;
+import paparatto.vfx.TextEffect;
 
 public class Suction extends AbstractAvocadoCharacterCard {
 
@@ -41,7 +42,8 @@ public class Suction extends AbstractAvocadoCharacterCard {
         if (m != null) {
             this.addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, CardHelper.getColor(110.0f, 112.0f, 66.0f))));
         }
-        this.addToBot(new WaitAction(0.6F));
+        this.addToBot(new WaitAction(0.8F));
+        this.addToBot(new VFXAction(new TextEffect(m.hb.cX, m.hb.cY, "SUCKED")));
         act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         act(new HealAction(p, p, this.magicNumber));
 

@@ -15,12 +15,12 @@ public class Shrapnel extends AbstractAvocadoCharacterCard {
     private static final CardTarget TARGET = CardTarget.SELF;  // ENEMY, ALL_ENEMY, SELF, NONE, SELF_AND_ENEMY, ALL
     private static final CardType TYPE = CardType.POWER;       // ATTACK, SKILL, POWER
 
-    private static final int COST = 1;                          // -1 for X cost, -2 for no cost, 0 and up for regular costs
+    private static final int COST = 0;                          // -1 for X cost, -2 for no cost, 0 and up for regular costs
 
     public Shrapnel() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseMagicNumber = 6;
+        baseMagicNumber = 5;
         magicNumberUp = 2;
         magicNumber = baseMagicNumber;
     }

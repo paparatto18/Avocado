@@ -23,12 +23,12 @@ public class Goorruption extends AbstractAvocadoCharacterCard {
     private static final CardTarget TARGET = CardTarget.SELF;  // ENEMY, ALL_ENEMY, SELF, NONE, SELF_AND_ENEMY, ALL
     private static final CardType TYPE = CardType.POWER;       // ATTACK, SKILL, POWER
 
-    private static final int COST = 3;                          // -1 for X cost, -2 for no cost, 0 and up for regular costs
+    private static final int COST = 2;                          // -1 for X cost, -2 for no cost, 0 and up for regular costs
 
     public Goorruption() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        this.newCost = 2;
+        this.newCost = 1;
     }
 
     @Override

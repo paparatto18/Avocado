@@ -39,6 +39,7 @@ public class Forge extends AbstractAvocadoCharacterCard {
         this.magicNumber = baseMagicNumber;
         this.exhaust = true;
         this.rawDescription = "Deal !D! Damage. NL Gain " + this.misc + " *Plated *Armor. NL If Fatal, increase this gain by 1. NL Exhaust.";
+
     }
 
 
@@ -51,8 +52,9 @@ public class Forge extends AbstractAvocadoCharacterCard {
 
     public void applyPowers() {
         this.baseBlock = this.misc;
+        this.baseMagicNumber = this.misc;
         super.applyPowers();
-        this.rawDescription = "Deal !D! Damage. NL Gain " + this.misc + " *Plated *Armor. NL If Fatal, increase this gain by 1. NL Exhaust.";
+        this.rawDescription = "Deal !D! Damage. NL Gain " + "!M!" + " *Plated *Armor. NL If Fatal, increase this gain by 1. NL Exhaust.";
         this.initializeDescription();
     }
     public AbstractCard makeCopy() {

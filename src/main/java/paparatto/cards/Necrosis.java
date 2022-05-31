@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import paparatto.Avocado;
 
 public class Necrosis extends AbstractAvocadoCharacterCard {
@@ -20,8 +21,8 @@ public class Necrosis extends AbstractAvocadoCharacterCard {
     public Necrosis() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseMagicNumber = 4;
-        magicNumberUp = 2;
+        baseMagicNumber = 2;
+        magicNumberUp = -1;
         magicNumber = baseMagicNumber;
         this.exhaust = true;
 
@@ -29,7 +30,7 @@ public class Necrosis extends AbstractAvocadoCharacterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        act(new LoseHPAction(p, p, 6));
-        act(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
+        act(new ApplyPowerAction(p,p, new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
+        act(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 6), 6));
     }
 }

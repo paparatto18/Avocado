@@ -18,7 +18,7 @@ public class FleshBarrier extends AbstractAvocadoCharacterCard {
     boolean hasProcced = false;
 
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON; // COMMON, UNCOMMON, RARE, SPECIAL
+    private static final CardRarity RARITY = CardRarity.COMMON; // COMMON, UNCOMMON, RARE, SPECIAL
     private static final CardTarget TARGET = CardTarget.SELF;  // ENEMY, ALL_ENEMY, SELF, NONE, SELF_AND_ENEMY, ALL
     private static final CardType TYPE = CardType.SKILL;       // ATTACK, SKILL, POWER
 

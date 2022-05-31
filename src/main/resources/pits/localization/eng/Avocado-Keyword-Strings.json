@@ -15,7 +15,9 @@
       "Peel",
       "peel",
       "Peel:",
-      "peel:"
+      "peel:",
+      "peeled",
+      "Peeled"
     ],
     "DESCRIPTION": "Lose #yPlated #yArmor to activate effect. You cannot peel if you do not have enough #yPlated #yArmor."
   },

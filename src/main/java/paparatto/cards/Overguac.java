@@ -23,7 +23,7 @@ public class Overguac extends AbstractAvocadoCharacterCard {
     public Overguac() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseMagicNumber = 3;
+        baseMagicNumber = 2;
         magicNumberUp = -1;
         magicNumber = baseMagicNumber;
 
@@ -43,7 +43,7 @@ public class Overguac extends AbstractAvocadoCharacterCard {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
             if (AbstractDungeon.player.getPower("Plated Armor").amount >= this.magicNumber) {
                 act(new PeelAction(p, this.magicNumber));
-                act(new DrawCardAction(p, 3));
+                act(new DrawCardAction(p, 2));
             }
         }
     }
