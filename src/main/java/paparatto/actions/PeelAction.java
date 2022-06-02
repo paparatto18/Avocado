@@ -6,15 +6,14 @@
 package paparatto.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
+import paparatto.relics.SturdyCarapace;
 
 public class PeelAction extends AbstractGameAction {
     private final AbstractPlayer p;
@@ -27,6 +26,7 @@ public class PeelAction extends AbstractGameAction {
         this.amount = amount;
         this.p = p;
     }
+
 
     public void update() {
         if (AbstractDungeon.player.hasRelic("TungstenPlate")){
@@ -45,6 +45,11 @@ public class PeelAction extends AbstractGameAction {
 
                 if (AbstractDungeon.player.hasPower("Shrapnel")) {
                     this.addToBot(new DamageRandomEnemyAction(new DamageInfo(p, AbstractDungeon.player.getPower("Shrapnel").amount, DamageInfo.DamageType.THORNS), AttackEffect.BLUNT_LIGHT));
+                }
+
+                if (AbstractDungeon.player.hasRelic("SturdyCarapace") && peelsThisTurn == 1) {
+                    this.addToBot(new ApplyPowerAction(p,p, new MetallicizePower(p,2), 2));
+
                 }
 
             }

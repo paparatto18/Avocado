@@ -128,6 +128,11 @@
     "NAME": "Splinter",
     "DESCRIPTION": "Peel 1 and deal !D! damage for each *Plated *Armor you have. NL Exhaust."
   },
+  "AvocadoCharacter:PitStorm": {
+    "NAME": "Pit Storm",
+    "DESCRIPTION": "Deal !D! Damage twice X times",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage twice X+1 times"
+  },
   "AvocadoCharacter:Growth": {
     "NAME": "Growth",
     "DESCRIPTION": "Next turn, NL Gain !M! Strength."
@@ -250,8 +255,8 @@
   },
   "AvocadoCharacter:ShellSmash": {
     "NAME": "Shell Smash",
-    "DESCRIPTION": "Peel ALL: NL Gain [E] and draw 1 card for each 2 *Plated *Armor lost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"Peel ALL: NL Gain [E] and draw 1 card for each *Plated *Armor lost. NL Exhaust."
+    "DESCRIPTION": "Peel !M!, Gain [E] , NL and draw 1 card for each 2 *Plated *Armor you have. NL Exhaust."
+
   },
   "AvocadoCharacter:Rummage": {
     "NAME": "Rummage",
@@ -265,6 +270,10 @@
   "AvocadoCharacter:PeeledShield": {
     "NAME": "Peeled Shield",
     "DESCRIPTION": "Costs 1 less [E] for each time you have Peeled this combat. NL Gain !B! Block."
+  },
+  "AvocadoCharacter:Lunacy": {
+    "NAME": "Lunacy",
+    "DESCRIPTION": "At the start of your next X turns, reduce the cost of a random card in your hand to 0 this combat. Exhaust "
   },
   "AvocadoCharacter:BasicDraw": {
     "NAME": "Basic Draw",
@@ -352,5 +361,17 @@
   "AvocadoCharacter:Shrapnel": {
     "NAME": "Shrapnel",
     "DESCRIPTION": "Whenever you Peel, deal !M! Damage to a random enemy."
+  },
+  "AvocadoCharacter:RAT": {
+    "NAME": "RAT",
+    "DESCRIPTION": "At the start of your turn, choose to gain 2 Strength or add a *Bite into your hand."
+  },
+  "AvocadoCharacter:GrowChoice": {
+    "NAME": "Grow",
+    "DESCRIPTION": "Gain !M! Strength."
+  },
+  "AvocadoCharacter:BiteChoice": {
+    "NAME": "Bite",
+    "DESCRIPTION": "Add a *Bite into your hand."
   }
 }

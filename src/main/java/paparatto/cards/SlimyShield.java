@@ -87,7 +87,7 @@ public class SlimyShield extends AbstractAvocadoCharacterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int realBaseBlock = this.baseBlock;
         this.baseBlock = this.magicNumber * countCards();
-        super.applyPowers();
+        this.applyPowers();
         this.baseBlock = realBaseBlock;
         this.isBlockModified = this.block != this.baseBlock;
         act(new GainBlockAction(p,p, this.block));

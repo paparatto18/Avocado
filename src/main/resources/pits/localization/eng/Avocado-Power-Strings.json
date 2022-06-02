@@ -145,7 +145,7 @@
 		]
 	},
 	"PeelNoPain": {
-		"NAME": "PeelNoPain",
+		"NAME": "Peel No Pain",
 		"DESCRIPTIONS": [
 			"Whenever you #yPeel, gain #b",
 			" #yBlock."
@@ -156,6 +156,19 @@
 		"DESCRIPTIONS": [
 			"Whenever you #yPeel, deal #b",
 			" Damage to a random enemy."
+		]
+	},
+	"Rat": {
+		"NAME": "RAT",
+		"DESCRIPTIONS": [
+			"At the start of your turn, choose to gain #b2 Strength or add a #yBite into your hand."
+		]
+	},
+	"LunacyPower": {
+		"NAME": "Lunacy",
+		"DESCRIPTIONS": [
+			"At the start of your next ",
+			" turns, reduce the cost of a random card in your hand to 0 this combat."
 		]
 	}
 }

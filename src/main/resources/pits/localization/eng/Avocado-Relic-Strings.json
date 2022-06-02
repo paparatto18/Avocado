@@ -13,6 +13,13 @@
 			"Start each combat with #b2 #yPlated #yArmor."
 		]
 	},
+	"SturdyCarapace": {
+		"NAME": "Sturdy Carapace",
+		"FLAVOR": "Your armor is extremely appealing.",
+		"DESCRIPTIONS": [
+			"Replaces #rCarapace. Start each combat with #b2 #yPlated #yArmor. The first time you #yPeel each turn, gain 2 #yMetallicize."
+		]
+	},
 	"MarkOfNausea": {
 		"NAME": "Mark of Nausea",
 		"FLAVOR": "This brand is used to signify parasites who have mastered nausea.",

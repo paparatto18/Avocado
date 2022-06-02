@@ -11,10 +11,12 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import paparatto.actions.PeelAction;
@@ -98,6 +100,7 @@ public class Avocado implements
     public Avocado() {
         BaseMod.subscribe(this);
 
+
         BaseMod.addColor(AbstractCardEnum.AVOCADO_GREEN, AVOCADO_GREEN, AVOCADO_GREEN, AVOCADO_GREEN,
                 AVOCADO_GREEN, AVOCADO_GREEN, AVOCADO_GREEN, AVOCADO_GREEN,
                 ATTACK_AVOCADO_GREEN, SKILL_AVOCADO_GREEN, POWER_AVOCADO_GREEN, ENERGY_ORB_AVOCADO_GREEN,
@@ -149,11 +152,16 @@ public class Avocado implements
 //      BaseMod.addRelicToCustomPool(new SomeRelic(), AbstractCardEnum.AVOCADO_GREEN);
 
         BaseMod.addRelicToCustomPool(new Shell(), AbstractCardEnum.AVOCADO_GREEN);
+        BaseMod.addRelicToCustomPool(new SturdyCarapace(), AbstractCardEnum.AVOCADO_GREEN);
         BaseMod.addRelicToCustomPool(new MarkOfNausea(), AbstractCardEnum.AVOCADO_GREEN);
+
         BaseMod.addRelicToCustomPool(new SuckDummy(), AbstractCardEnum.AVOCADO_GREEN);
-        BaseMod.addRelicToCustomPool(new TwistedTendril(), AbstractCardEnum.AVOCADO_GREEN);
         BaseMod.addRelicToCustomPool(new NonNewtonianFlesh(), AbstractCardEnum.AVOCADO_GREEN);
+
+        BaseMod.addRelicToCustomPool(new TwistedTendril(), AbstractCardEnum.AVOCADO_GREEN);
+
         BaseMod.addRelicToCustomPool(new GreenSkull(), AbstractCardEnum.AVOCADO_GREEN);
+
         BaseMod.addRelicToCustomPool(new PitOfFury(), AbstractCardEnum.AVOCADO_GREEN);
         BaseMod.addRelicToCustomPool(new PreservedParasite(), AbstractCardEnum.AVOCADO_GREEN);
         BaseMod.addRelicToCustomPool(new StartCodon(), AbstractCardEnum.AVOCADO_GREEN);
@@ -200,6 +208,7 @@ public class Avocado implements
         BaseMod.addCard(new Scavenger());
         BaseMod.addCard(new ArmedPit());
         BaseMod.addCard(new Splinter());
+        BaseMod.addCard(new PitStorm());
 
 
         BaseMod.addCard(new ParasiticShell());
@@ -232,6 +241,7 @@ public class Avocado implements
         BaseMod.addCard(new ShellSmash());
         BaseMod.addCard(new Rummage());
         BaseMod.addCard(new Spoils());
+        BaseMod.addCard(new Lunacy());
 
 
 
@@ -251,6 +261,11 @@ public class Avocado implements
         BaseMod.addCard(new Recombination());
         BaseMod.addCard(new PeelNoPain());
         BaseMod.addCard(new Shrapnel());
+        BaseMod.addCard(new RAT());
+
+        BaseMod.addCard(new GrowChoice());
+        BaseMod.addCard(new BiteChoice());
+
 
 //        new AutoAdd("paparatto")
 //                .packageFilter(AbstractAvocadoCharacterCard.class)
@@ -330,6 +345,7 @@ public class Avocado implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         PeelAction.peelsThisCombat = 0;
     }
+
 
 
 }

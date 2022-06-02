@@ -1,10 +1,9 @@
 package paparatto.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,13 +25,14 @@ public class ShellSmash extends AbstractAvocadoCharacterCard {
         super(ID, COST, TYPE, RARITY, TARGET);
         this.exhaust = true;
         this.baseMagicNumber = 2;
+        magicNumberUp = -1;
         magicNumber = baseMagicNumber;
     }
 
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
-            if (AbstractDungeon.player.getPower("Plated Armor").amount >= 0) {
+            if (AbstractDungeon.player.getPower("Plated Armor").amount >= 2) {
                 this.glowColor = AbstractCard.GREEN_BORDER_GLOW_COLOR.cpy();
             }
         }
@@ -41,17 +41,15 @@ public class ShellSmash extends AbstractAvocadoCharacterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
-            if (AbstractDungeon.player.getPower("Plated Armor").amount >= 1) {
-                int count;
-                if (this.upgraded) {
-                    count = (AbstractDungeon.player.getPower("Plated Armor").amount);
-                } else {
-                    count = (int) Math.floor(((float)AbstractDungeon.player.getPower("Plated Armor").amount) / 2);
-                }
-                act(new PeelAction(p, AbstractDungeon.player.getPower("Plated Armor").amount));
-                act(new DrawCardAction(count));
-                act(new GainEnergyAction(count));
+            int plate = (int) Math.floor(((float)AbstractDungeon.player.getPower("Plated Armor").amount) / 2);
+            for (int i = 0; i < plate ; ++i) {
+                act(new PeelAction(p, this.magicNumber));
+                act(new DrawCardAction(1));
+                act(new GainEnergyAction(1));
+
             }
         }
+
+
     }
 }

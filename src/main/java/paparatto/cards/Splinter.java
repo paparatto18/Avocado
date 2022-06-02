@@ -43,7 +43,7 @@ public class Splinter extends AbstractAvocadoCharacterCard {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
             int plate = AbstractDungeon.player.getPower("Plated Armor").amount;
             for (int i = 0; i < plate ; ++i) {
-                act(new PeelAction(p, AbstractDungeon.player.getPower("Plated Armor").amount));
+                act(new PeelAction(p, 1));
                 act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 
             }

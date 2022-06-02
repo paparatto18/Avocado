@@ -30,6 +30,7 @@ public class Spoils extends AbstractAvocadoCharacterCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.exhaust = false;
             this.rawDescription = this.upgradeDescription;
             this.initializeDescription();
         }
