@@ -32,7 +32,7 @@ public class Splinter extends AbstractAvocadoCharacterCard {
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
-            if (AbstractDungeon.player.getPower("Plated Armor").amount >= 0) {
+            if (AbstractDungeon.player.getPower("Plated Armor").amount >= 2) {
                 this.glowColor = AbstractCard.GREEN_BORDER_GLOW_COLOR.cpy();
             }
         }
@@ -41,12 +41,29 @@ public class Splinter extends AbstractAvocadoCharacterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
-            int plate = AbstractDungeon.player.getPower("Plated Armor").amount;
+            int plate = (int) Math.floor(((float)AbstractDungeon.player.getPower("Plated Armor").amount) / 2);
             for (int i = 0; i < plate ; ++i) {
                 act(new PeelAction(p, 1));
                 act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 
             }
+        }
+    }
+
+    public void applyPowers() {
+        if (AbstractDungeon.player.hasPower("Plated Armor")) {
+            int plate = (int) Math.floor(((float) AbstractDungeon.player.getPower("Plated Armor").amount) / 2);
+            if (plate == 1) {
+                this.rawDescription = "Peel 1 and deal !D! damage for each 2 *Plated *Armor you have. (" + plate + " time) NL Exhaust.";
+
+            } else {
+                this.rawDescription = "Peel 1 and deal !D! damage for each 2 *Plated *Armor you have. (" + plate + " times) NL Exhaust.";
+            }
+            this.initializeDescription();
+        }else {
+            this.rawDescription = "Peel 1 and deal !D! damage for each 2 *Plated *Armor you have. (0 times) NL Exhaust.";
+            this.initializeDescription();
+
         }
     }
 }

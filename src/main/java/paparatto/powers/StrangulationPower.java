@@ -2,7 +2,10 @@
 package paparatto.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +15,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ConstrictedPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
-public class StrangulationPower extends AbstractPower {
+public class StrangulationPower extends AbstractPower implements BetterOnApplyPowerPower {
     public static final String POWER_ID = "Strangulation";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("Strangulation");
     public static final String NAME = powerStrings.NAME;
@@ -33,19 +36,36 @@ public class StrangulationPower extends AbstractPower {
         this.description = DESCRIPTIONS[0] + "#b" + this.amount + DESCRIPTIONS[1];
     }
 
-    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.ID.equals("Constricted")) {
-            if (target != this.owner) {
-                if (!hasProcced) {
-                    this.addToBot(new ApplyPowerAction(target, this.owner, new ConstrictedPower(target, this.owner, this.amount), this.amount));
-                    hasProcced = true;
-                } else {
-                    hasProcced = false;
-                }
-            }
-        }
+//    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+//        if (power.ID.equals("Constricted")) {
+//            if (target != this.owner) {
+//                if (!hasProcced) {
+//                    this.addToBot(new ApplyPowerAction(target, this.owner, new ConstrictedPower(target, this.owner, this.amount), this.amount));
+//                    hasProcced = true;
+//                } else {
+//                    hasProcced = false;
+//                }
+//            }
+//        }
+//
+//    }
 
+
+
+
+    @Override
+    public boolean betterOnApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        if (power.ID.equals("Constricted") && target != this.owner) {
+            power.amount += this.amount;
+        }
+        return true;
     }
 
-
+    @Override
+    public int betterOnApplyPowerStacks(AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
+        if (power.ID.equals("Constricted") && target != this.owner) {
+            stackAmount += this.amount;
+        }
+        return stackAmount;
+    }
 }

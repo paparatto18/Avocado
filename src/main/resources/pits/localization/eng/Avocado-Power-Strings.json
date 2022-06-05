@@ -170,5 +170,18 @@
 			"At the start of your next ",
 			" turns, reduce the cost of a random card in your hand to 0 this combat."
 		]
+	},
+	"Toxoplasmosis": {
+		"NAME": "Toxoplasmosis",
+		"DESCRIPTIONS": [
+			"At the start of its turn, deal #b",
+			" damage to ALL enemies"
+		]
+	},
+	"Fungal": {
+		"NAME": "Fungal Elixir",
+		"DESCRIPTIONS": [
+			"Reduce your next Vulnerable gain by "
+		]
 	}
 }

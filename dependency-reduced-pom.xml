@@ -4,7 +4,7 @@
   <groupId>paparatto</groupId>
   <artifactId>Avocado</artifactId>
   <name>Avocado</name>
-  <version>0.0.1</version>
+  <version>0.1.2</version>
   <description>Paparatto's Avocado character template</description>
   <build>
     <finalName>Avocado</finalName>

@@ -30,7 +30,7 @@ public class GreenSkull extends CustomRelic {
                 if (!GreenSkull.this.isActive && AbstractDungeon.player.isBloodied) {
                     GreenSkull.this.flash();
                     GreenSkull.this.pulse = true;
-                    AbstractDungeon.player.addPower(new PlatedArmorPower(AbstractDungeon.player, 3));
+                    AbstractDungeon.player.addPower(new PlatedArmorPower(AbstractDungeon.player, 4));
                     this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, GreenSkull.this));
                     GreenSkull.this.isActive = true;
                     AbstractDungeon.onModifyPower();

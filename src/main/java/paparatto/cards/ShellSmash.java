@@ -50,6 +50,23 @@ public class ShellSmash extends AbstractAvocadoCharacterCard {
             }
         }
 
-
     }
+
+    public void applyPowers() {
+        if (AbstractDungeon.player.hasPower("Plated Armor")) {
+            int plate = (int) Math.floor(((float) AbstractDungeon.player.getPower("Plated Armor").amount) / 2);
+            if (plate == 1) {
+                this.rawDescription = "Peel !M!, Gain [E] , NL and draw 1 card for each 2 *Plated *Armor you have. (" + plate + " time) NL Exhaust.";
+
+            } else {
+                this.rawDescription = "Peel !M!, Gain [E] , NL and draw 1 card for each 2 *Plated *Armor you have. (" + plate + " times) NL Exhaust.";
+            }
+            this.initializeDescription();
+        }else {
+            this.rawDescription = "Peel !M!, Gain [E] , NL and draw 1 card for each 2 *Plated *Armor you have. (0 times) NL Exhaust.";
+            this.initializeDescription();
+
+        }
+    }
+
 }

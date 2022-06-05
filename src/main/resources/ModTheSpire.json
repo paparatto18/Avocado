@@ -3,9 +3,9 @@
   "name": "Avocado",
   "author_list": ["Paparatto"],
   "description": "the avocado",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "sts_version": "10-18-2018",
   "mts_version": "3.4.0",  
-  "dependencies": ["basemod"]
+  "dependencies": ["basemod", "stslib"]
 }
 

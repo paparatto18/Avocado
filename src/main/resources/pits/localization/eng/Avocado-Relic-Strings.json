@@ -17,14 +17,14 @@
 		"NAME": "Sturdy Carapace",
 		"FLAVOR": "Your armor is extremely appealing.",
 		"DESCRIPTIONS": [
-			"Replaces #rCarapace. Start each combat with #b2 #yPlated #yArmor. The first time you #yPeel each turn, gain 2 #yMetallicize."
+			"Replaces #gCarapace. Start each combat with #b2 #yPlated #yArmor. The first time you #yPeel each turn, gain 2 #yMetallicize."
 		]
 	},
 	"MarkOfNausea": {
 		"NAME": "Mark of Nausea",
 		"FLAVOR": "This brand is used to signify parasites who have mastered nausea.",
 		"DESCRIPTIONS": [
-			"Gain #b1 Energy at the start of your turn. At the start of combat, shuffle #b3 #ySlimeds into your draw pile."
+			"Gain #b1 Energy at the start of your turn. At the start of combat, shuffle #b3 #rSlimeds into your draw pile."
 		]
 	},
 	"SuckDummy": {
@@ -52,7 +52,7 @@
 		"NAME": "Green Skull",
 		"FLAVOR": "A small skull collected from fallen ascenders.",
 		"DESCRIPTIONS": [
-			"While your HP is at or below #b50%, you have #b3 additional #yPlated #yArmor."
+			"While your HP is at or below #b50%, you have #b4 additional #yPlated #yArmor."
 		]
 	},
 	"PitOfFury": {
@@ -80,7 +80,7 @@
 		"NAME": "Tungsten Plate",
 		"FLAVOR": "It's rly heavy.",
 		"DESCRIPTIONS": [
-			"Reduce all #yPlated #Armor losses due to #yPeel by #b1."
+			"Reduce all #yPlated #yArmor losses due to #yPeel by #b1."
 		]
 	}
 }

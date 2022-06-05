@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
@@ -38,8 +39,17 @@ public class SturdyCarapace extends CustomRelic {
         }
     }
 
-    public void onEquip() {
-        this.addToBot(new LoseRelicAction("Shell"));
+    @Override
+    public void onPlayCard(AbstractCard c, AbstractMonster m) {
+        super.onPlayCard(c, m);
+        if (PeelAction.peelsThisTurn > 0 ) {
+            this.pulse = false;
+        }
+    }
+
+    @Override
+    public void obtain() {
+        instantObtain(AbstractDungeon.player, 0, true);
     }
 
     @Override
@@ -50,7 +60,7 @@ public class SturdyCarapace extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return AbstractDungeon.player.hasRelic("Shell");
+        return AbstractDungeon.player.hasRelic(Shell.ID);
     }
 
     @Override

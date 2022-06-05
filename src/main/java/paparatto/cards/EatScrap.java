@@ -3,7 +3,9 @@ package paparatto.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import paparatto.Avocado;
@@ -22,17 +24,19 @@ public class EatScrap extends AbstractAvocadoCharacterCard {
         super(ID, COST, TYPE, RARITY, TARGET);
 
 
-        baseMagicNumber = 4;
+        baseMagicNumber = 5;
         magicNumberUp = 2;
         magicNumber = baseMagicNumber;
         this.exhaust = true;
         this.tags.add(CardTags.HEALING);
+        this.cardsToPreview = new Slimed();
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         act(new HealAction(p, p, this.magicNumber));
+        act(new MakeTempCardInHandAction(new Slimed(), 1));
 
     }
 }

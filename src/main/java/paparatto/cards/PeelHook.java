@@ -25,7 +25,7 @@ public class PeelHook extends AbstractAvocadoCharacterCard {
     public PeelHook() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseDamage = 5;
+        baseDamage = 7;
         damageUp = 3;
     }
 

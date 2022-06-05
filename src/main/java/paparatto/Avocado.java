@@ -242,6 +242,8 @@ public class Avocado implements
         BaseMod.addCard(new Rummage());
         BaseMod.addCard(new Spoils());
         BaseMod.addCard(new Lunacy());
+        BaseMod.addCard(new Toxoplasmosis());
+        BaseMod.addCard(new FungalElixir());
 
 
 

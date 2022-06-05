@@ -3,7 +3,7 @@
     <groupId>paparatto</groupId>
     <artifactId>Avocado</artifactId>
     <!--<version>1.2.0</version>-->
-    <version>0.0.1</version>
+    <version>0.1.2</version>
     <name>Avocado</name>
     <description>Paparatto's Avocado character template</description>
 

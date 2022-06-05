@@ -26,6 +26,6 @@ public class Ratrops extends AbstractAvocadoCharacterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        act(new ApplyPowerAction(p, p, new RatropsPower(p, 2), 2));
+        act(new ApplyPowerAction(p, p, new RatropsPower(p, 1), 1));
     }
 }

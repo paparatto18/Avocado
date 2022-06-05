@@ -33,7 +33,7 @@ public class NonNewtonianFlesh extends CustomRelic {
             this.pulse = false;
             this.flash();
             if (AbstractDungeon.player.hasPower("Plated Armor")) {
-                blockAmount = MathUtils.round((float)AbstractDungeon.player.getPower("Plated Armor").amount * 0.5F);
+                blockAmount = MathUtils.floor((float)AbstractDungeon.player.getPower("Plated Armor").amount * 0.5F);
             }
             this.addToTop(new GainBlockAction(AbstractDungeon.player, blockAmount));
         }
