@@ -34,6 +34,15 @@
       "reclaim"
     ],
     "DESCRIPTION": "Adds a copy of a random card from your discard pile into your hand."
+  },
+  "REACTIONARY": {
+    "NAMES": [
+      "Reactionary:",
+      "reactionary:",
+      "Reactionary",
+      "reactionary"
+    ],
+    "DESCRIPTION": "Activate effect if the enemy intends to attack."
   }
 }
 

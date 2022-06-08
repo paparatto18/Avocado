@@ -183,5 +183,19 @@
 		"DESCRIPTIONS": [
 			"Reduce your next Vulnerable gain by "
 		]
+	},
+	"Enraged": {
+		"NAME": "Enraged",
+		"DESCRIPTIONS": [
+			"Whenever you gain a Debuff, gain #b",
+			" #yStrength."
+		]
+	},
+	"Topheavy": {
+		"NAME": "Top-Heavy",
+		"DESCRIPTIONS": [
+			"Whenever you receive unblocked attack damage, gain  #b",
+			" weak."
+		]
 	}
 }

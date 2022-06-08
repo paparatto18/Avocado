@@ -8,4 +8,7 @@ public class LibraryTypeEnum {
     @SpireEnum
     public static CardLibrary.LibraryType AVOCADO_GREEN;
 
+    @SpireEnum
+    public static CardLibrary.LibraryType NOBBER_RED;
+
 }

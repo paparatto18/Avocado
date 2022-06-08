@@ -8,4 +8,8 @@ public class AvocadoCharacterEnum {
     @SpireEnum
     public static AbstractPlayer.PlayerClass AVOCADOCHARACTER;
 
+    @SpireEnum
+    public static AbstractPlayer.PlayerClass NOBCHARACTER;
+
+
 }

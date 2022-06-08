@@ -19,9 +19,20 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import paparatto.NobCards.*;
+import paparatto.NobCards.BasicBlock;
+import paparatto.NobCards.BasicDraw;
+import paparatto.NobCards.BasicEnergy;
+import paparatto.NobCards.BasicMetallicize;
+import paparatto.NobCards.BasicPower;
+import paparatto.NobCards.BasicPowerPunch;
+import paparatto.NobCards.BasicPunch;
+import paparatto.NobCards.BasicPunchAll;
+import paparatto.NobCards.BasicPunchX;
 import paparatto.actions.PeelAction;
 import paparatto.cards.*;
 import paparatto.characters.AvocadoCharacter;
+import paparatto.characters.NobCharacter;
 import paparatto.patches.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -51,6 +62,7 @@ public class Avocado implements
     private static final String AUTHOR = "Paparatto";
     private static final String DESCRIPTION = "Paparatto's Avocado character template";
 
+
     public static Gson gson;
     private static Map<String, Keyword> keywords;
 
@@ -59,6 +71,7 @@ public class Avocado implements
     // Colors (RGB)
     // Character Color
     public static final Color AVOCADO_GREEN = CardHelper.getColor(110.0f, 112.0f, 66.0f);
+    public static final Color NOBBER_RED = CardHelper.getColor(171.0f, 57.0f, 73.0f);
 
     // Potion Colors in RGB
     // public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
@@ -77,13 +90,33 @@ public class Avocado implements
     private static final String POWER_AVOCADO_GREEN_PORTRAIT = "pits/images/1024/bg_power_AVOCADO_GREEN.png";
     private static final String ENERGY_ORB_AVOCADO_GREEN_PORTRAIT = "pits/images/1024/card_AVOCADO_GREEN_orb.png";
 
-    // Character assets
     private static final String AVOCADOCHARACTER_BUTTON = "pits/images/charSelect/DefaultCharacterButton.png";
     private static final String AVOCADOCHARACTER_PORTRAIT = "pits/images/charSelect/DefaultCharacterPortraitBG.png";
 
     public static final String AVOCADOCHARACTER_SHOULDER_1 = "pits/images/char/defaultCharacter/shoulder.png";
     public static final String AVOCADOCHARACTER_SHOULDER_2 = "pits/images/char/defaultCharacter/shoulder2.png";
     public static final String AVOCADOCHARACTER_CORPSE = "pits/images/char/defaultCharacter/corpse.png";
+
+
+
+    private static final String ATTACK_NOBBER_RED = "pits/images/512/bg_attack_NOBBER_RED.png";
+    private static final String SKILL_NOBBER_RED = "pits/images/512/bg_skill_NOBBER_RED.png";
+    private static final String POWER_NOBBER_RED = "pits/images/512/bg_power_NOBBER_RED.png";
+    private static final String ENERGY_ORB_NOBBER_RED = "pits/images/512/card_NOBBER_RED_orb.png";
+    private static final String NOB_CARD_ENERGY_ORB = "pits/images/512/nob_card_small_orb.png";
+
+    private static final String ATTACK_NOBBER_RED_PORTRAIT = "pits/images/1024/bg_attack_NOBBER_RED.png";
+    private static final String SKILL_NOBBER_RED_PORTRAIT = "pits/images/1024/bg_skill_NOBBER_RED.png";
+    private static final String POWER_NOBBER_RED_PORTRAIT = "pits/images/1024/bg_power_NOBBER_RED.png";
+    private static final String ENERGY_ORB_NOBBER_RED_PORTRAIT = "pits/images/1024/card_NOBBER_RED_orb.png";
+
+
+    private static final String NOBCHARACTER_BUTTON = "pits/images/charSelect/NobCharacterButton.png";
+    private static final String NOBCHARACTER_PORTRAIT = "pits/images/charSelect/NobCharacterPortraitBG.png";
+
+    public static final String NOBCHARACTER_SHOULDER_1 = "pits/images/char/defaultCharacter/nobshoulder.png";
+    public static final String NOBCHARACTER_SHOULDER_2 = "pits/images/char/defaultCharacter/nobshoulder2.png";
+    public static final String NOBCHARACTER_CORPSE = "pits/images/char/defaultCharacter/nobcorpse.png";
 
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "pits/images/Badge.png";
@@ -106,6 +139,12 @@ public class Avocado implements
                 ATTACK_AVOCADO_GREEN, SKILL_AVOCADO_GREEN, POWER_AVOCADO_GREEN, ENERGY_ORB_AVOCADO_GREEN,
                 ATTACK_AVOCADO_GREEN_PORTRAIT, SKILL_AVOCADO_GREEN_PORTRAIT, POWER_AVOCADO_GREEN_PORTRAIT,
                 ENERGY_ORB_AVOCADO_GREEN_PORTRAIT, CARD_ENERGY_ORB);
+
+        BaseMod.addColor(AbstractCardEnum.NOBBER_RED, NOBBER_RED, NOBBER_RED, NOBBER_RED,
+                NOBBER_RED, NOBBER_RED, NOBBER_RED, NOBBER_RED,
+                ATTACK_NOBBER_RED, SKILL_NOBBER_RED, POWER_NOBBER_RED, ENERGY_ORB_NOBBER_RED,
+                ATTACK_NOBBER_RED_PORTRAIT, SKILL_NOBBER_RED_PORTRAIT, POWER_NOBBER_RED_PORTRAIT,
+                ENERGY_ORB_NOBBER_RED_PORTRAIT, NOB_CARD_ENERGY_ORB);
     }
 
     @SuppressWarnings("unused")
@@ -124,6 +163,8 @@ public class Avocado implements
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new AvocadoCharacter("the Default", AvocadoCharacterEnum.AVOCADOCHARACTER),
                 AVOCADOCHARACTER_BUTTON, AVOCADOCHARACTER_PORTRAIT, AvocadoCharacterEnum.AVOCADOCHARACTER);
+        BaseMod.addCharacter(new NobCharacter("the Default", AvocadoCharacterEnum.NOBCHARACTER),
+                NOBCHARACTER_BUTTON, NOBCHARACTER_PORTRAIT, AvocadoCharacterEnum.NOBCHARACTER);
     }
 
     // =============== /LOAD THE CHARACTER/ =================
@@ -267,6 +308,35 @@ public class Avocado implements
 
         BaseMod.addCard(new GrowChoice());
         BaseMod.addCard(new BiteChoice());
+
+        // ================ /NOB CARDS/ ===================
+
+        BaseMod.addCard(new NobStrike());
+        BaseMod.addCard(new NobDefend());
+        BaseMod.addCard(new SkullBash());
+        BaseMod.addCard(new Rush());
+
+
+        BaseMod.addCard(new BasicPunchX());
+        BaseMod.addCard(new Smash());
+        BaseMod.addCard(new WindCondition());
+        BaseMod.addCard(new Stumble());
+
+
+        BaseMod.addCard(new BasicEnergy());
+        BaseMod.addCard(new Moxie());
+        BaseMod.addCard(new SelfSoothing());
+        BaseMod.addCard(new Irritation());
+        BaseMod.addCard(new SignatureNob());
+
+
+
+
+        BaseMod.addCard(new Bellow());
+        BaseMod.addCard(new Topheavy());
+        BaseMod.addCard(new BasicPower());
+        BaseMod.addCard(new BasicMetallicize());
+
 
 
 //        new AutoAdd("paparatto")

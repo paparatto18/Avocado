@@ -9,5 +9,16 @@
                         "NL You arm a pit, ready to fire...",
                         "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL Join us, fruit." // Vampires Event text
                 ]
+        },
+        "AvocadoCharacter:NobCharacter": {
+                "NAMES": [
+                        "The Nobber",
+                        "the Nobber"
+                ],
+                "TEXT": [
+                        "who is the nobber",
+                        "NL nobbers...",
+                        "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL Join us, nobber." // Vampires Event text
+                ]
         }
 }

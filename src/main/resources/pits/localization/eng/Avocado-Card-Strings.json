@@ -383,5 +383,61 @@
   "AvocadoCharacter:BiteChoice": {
     "NAME": "Bite",
     "DESCRIPTION": "Add a *Bite into your hand."
+  },
+
+
+
+  "AvocadoCharacter:NobStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "AvocadoCharacter:NobDefend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "AvocadoCharacter:SkullBash": {
+    "NAME": "Skull Bash",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
+  },
+  "AvocadoCharacter:Rush": {
+    "NAME": "Rush",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "AvocadoCharacter:Smash": {
+    "NAME": "Smash",
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Weak. NL Apply 1 Vulnerable."
+  },
+  "AvocadoCharacter:WindCondition": {
+    "NAME": "Wind Condition",
+    "DESCRIPTION": "Exhaust all attacks in your hand. NL Deal !D! damage for each card Exhausted."
+  },
+  "AvocadoCharacter:Stumble": {
+    "NAME": "Stumble",
+    "DESCRIPTION": "Reactionary: Deal !D! damage and gain !B! Block. NL Otherwise, deal !D! damage twice."
+  },
+  "AvocadoCharacter:Irritation": {
+    "NAME": "Irritation",
+    "DESCRIPTION": "If there are no attacks in your hand, your attacks deal double damage for 2 turns."
+  },
+  "AvocadoCharacter:SignatureNob": {
+    "NAME": "Signature Nob",
+    "DESCRIPTION": "Can only be played if this is the only non-attack in your hand. NL Gain !M! Strength."
+  },
+  "AvocadoCharacter:Moxie": {
+    "NAME": "Moxie",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor."
+  },
+  "AvocadoCharacter:SelfSoothing": {
+    "NAME": "Self Soothing",
+    "DESCRIPTION": "Gain !B! Block. NL Gain 2 Weak. NL Shuffle this card into your draw pile."
+  },
+  "AvocadoCharacter:Bellow": {
+    "NAME": "Bellow",
+    "DESCRIPTION": "Whenever you gain a debuff, NL gain !M! Strength."
+  },
+  "AvocadoCharacter:Topheavy": {
+    "NAME": "Top-Heavy",
+    "DESCRIPTION": "Gain !M! Strength. NL Whenever you receive unblocked attack damage, NL gain 1 Weak."
   }
+
 }

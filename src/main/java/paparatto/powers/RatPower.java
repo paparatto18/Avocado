@@ -35,7 +35,7 @@ public class RatPower extends AbstractPower {
     private ArrayList<AbstractGameEffect> effect = new ArrayList();
     private float vfxTimer = 1.0F;
     private float animationFrame;
-    Color greenColor = new Color(0.0F, 1.0F, 0.0F, 1.0F);
+
 
 
     public RatPower(AbstractCreature owner, boolean upgraded) {
