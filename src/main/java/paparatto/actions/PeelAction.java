@@ -51,7 +51,7 @@ public class PeelAction extends AbstractGameAction {
 
                 if (AbstractDungeon.player.hasRelic("SturdyCarapace") && peelsThisTurn == 1) {
                     this.addToBot(new ApplyPowerAction(p,p, new MetallicizePower(p,2), 2));
-
+                    AbstractDungeon.player.getRelic("SturdyCarapace").stopPulse();
                 }
 
             }
