@@ -40,11 +40,13 @@ public class SturdyCarapace extends CustomRelic {
     }
 
     @Override
-    public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        super.onPlayCard(c, m);
-        if (PeelAction.peelsThisTurn > 0 ) {
-            this.pulse = false;
-        }
+    public void onPlayerEndTurn() {
+        this.stopPulse();
+    }
+
+    @Override
+    public void onVictory() {
+        this.stopPulse();
     }
 
     @Override
