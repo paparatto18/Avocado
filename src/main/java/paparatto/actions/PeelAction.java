@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 import paparatto.relics.SturdyCarapace;
+import paparatto.relics.TungstenPlate;
 
 public class PeelAction extends AbstractGameAction {
     private final AbstractPlayer p;
@@ -31,6 +32,7 @@ public class PeelAction extends AbstractGameAction {
     public void update() {
         if (AbstractDungeon.player.hasRelic("TungstenPlate")){
             this.amount -= 1;
+            AbstractDungeon.player.getRelic("TungstenPlate").flash();
         }
 
         if (AbstractDungeon.player.hasPower("Plated Armor")) {

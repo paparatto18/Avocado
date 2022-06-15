@@ -161,7 +161,9 @@
 	"Rat": {
 		"NAME": "RAT",
 		"DESCRIPTIONS": [
-			"At the start of your turn, choose to gain #b2 Strength or add a #yBite into your hand."
+			"At the start of your turn, choose to gain #b2 Strength or add a #yBite into your hand.",
+			"At the start of your turn, choose to gain #b2 Strength or add a #yBite into your hand #b",
+			" times."
 		]
 	},
 	"LunacyPower": {
@@ -184,6 +186,9 @@
 			"Reduce your next Vulnerable gain by "
 		]
 	},
+
+
+
 	"Enraged": {
 		"NAME": "Enraged",
 		"DESCRIPTIONS": [
@@ -196,6 +201,13 @@
 		"DESCRIPTIONS": [
 			"Whenever you receive unblocked attack damage, gain  #b",
 			" weak."
+		]
+	},
+	"Education": {
+		"NAME": "Educated",
+		"DESCRIPTIONS": [
+			"Whenever you draw a Skill, reduce its cost by #b",
+			" this combat."
 		]
 	}
 }

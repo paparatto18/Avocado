@@ -82,5 +82,14 @@
 		"DESCRIPTIONS": [
 			"Reduce all #yPlated #yArmor losses due to #yPeel by #b1."
 		]
+	},
+
+
+	"RightHorn": {
+		"NAME": "Nob's Right Horn",
+		"FLAVOR": "It repairs any damage extremely quickly.",
+		"DESCRIPTIONS": [
+			"The first time you lose HP each combat, Gain #b2 #yTemporary #yStrength and heal #b3 HP."
+		]
 	}
 }

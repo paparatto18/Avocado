@@ -134,8 +134,8 @@ public class Avocado implements
         BaseMod.subscribe(this);
 
 
-        BaseMod.addColor(AbstractCardEnum.AVOCADO_GREEN, AVOCADO_GREEN, AVOCADO_GREEN, AVOCADO_GREEN,
-                AVOCADO_GREEN, AVOCADO_GREEN, AVOCADO_GREEN, AVOCADO_GREEN,
+        BaseMod.addColor(AbstractCardEnum.AVOCADO_GREEN, AVOCADO_GREEN.cpy(), AVOCADO_GREEN.cpy(), AVOCADO_GREEN.cpy(),
+                AVOCADO_GREEN.cpy(), AVOCADO_GREEN.cpy(), AVOCADO_GREEN.cpy(), AVOCADO_GREEN.cpy(),
                 ATTACK_AVOCADO_GREEN, SKILL_AVOCADO_GREEN, POWER_AVOCADO_GREEN, ENERGY_ORB_AVOCADO_GREEN,
                 ATTACK_AVOCADO_GREEN_PORTRAIT, SKILL_AVOCADO_GREEN_PORTRAIT, POWER_AVOCADO_GREEN_PORTRAIT,
                 ENERGY_ORB_AVOCADO_GREEN_PORTRAIT, CARD_ENERGY_ORB);
@@ -147,7 +147,7 @@ public class Avocado implements
                 ENERGY_ORB_NOBBER_RED_PORTRAIT, NOB_CARD_ENERGY_ORB);
     }
 
-    @SuppressWarnings("unused")
+
     public static void initialize() {
         logger.info("========================= Initializing Monstrosity. Hi. =========================");
         Avocado paparatto = new Avocado();
@@ -163,8 +163,9 @@ public class Avocado implements
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new AvocadoCharacter("the Default", AvocadoCharacterEnum.AVOCADOCHARACTER),
                 AVOCADOCHARACTER_BUTTON, AVOCADOCHARACTER_PORTRAIT, AvocadoCharacterEnum.AVOCADOCHARACTER);
-        BaseMod.addCharacter(new NobCharacter("the Default", AvocadoCharacterEnum.NOBCHARACTER),
-                NOBCHARACTER_BUTTON, NOBCHARACTER_PORTRAIT, AvocadoCharacterEnum.NOBCHARACTER);
+
+//        BaseMod.addCharacter(new NobCharacter("the Default", AvocadoCharacterEnum.NOBCHARACTER),
+//                NOBCHARACTER_BUTTON, NOBCHARACTER_PORTRAIT, AvocadoCharacterEnum.NOBCHARACTER);
     }
 
     // =============== /LOAD THE CHARACTER/ =================
@@ -208,6 +209,8 @@ public class Avocado implements
         BaseMod.addRelicToCustomPool(new StartCodon(), AbstractCardEnum.AVOCADO_GREEN);
         BaseMod.addRelicToCustomPool(new TungstenPlate(), AbstractCardEnum.AVOCADO_GREEN);
 
+//        BaseMod.addRelicToCustomPool(new RightHorn(), AbstractCardEnum.NOBBER_RED);
+
 
 
     }
@@ -220,7 +223,7 @@ public class Avocado implements
     @Override
     public void receiveEditCards() {
         // Add the cards
-
+        
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new Defend());
 
@@ -311,39 +314,33 @@ public class Avocado implements
 
         // ================ /NOB CARDS/ ===================
 
-        BaseMod.addCard(new NobStrike());
-        BaseMod.addCard(new NobDefend());
-        BaseMod.addCard(new SkullBash());
-        BaseMod.addCard(new Rush());
+//        BaseMod.addCard(new NobStrike());
+//        BaseMod.addCard(new NobDefend());
+//        BaseMod.addCard(new SkullBash());
+//        BaseMod.addCard(new Rush());
+//
+//
+//        BaseMod.addCard(new BasicPunchX());
+//        BaseMod.addCard(new Smash());
+//        BaseMod.addCard(new PerfectedSmash());
+//        BaseMod.addCard(new WindCondition());
+//        BaseMod.addCard(new Stumble());
+//
+//
+//        BaseMod.addCard(new BasicEnergy());
+//        BaseMod.addCard(new Moxie());
+//        BaseMod.addCard(new SelfSoothing());
+//        BaseMod.addCard(new Irritation());
+//        BaseMod.addCard(new SignatureNob());
+//        BaseMod.addCard(new Regenerate());
+//
+//
+//        BaseMod.addCard(new Bellow());
+//        BaseMod.addCard(new Topheavy());
+//        BaseMod.addCard(new Education());
 
 
-        BaseMod.addCard(new BasicPunchX());
-        BaseMod.addCard(new Smash());
-        BaseMod.addCard(new WindCondition());
-        BaseMod.addCard(new Stumble());
 
-
-        BaseMod.addCard(new BasicEnergy());
-        BaseMod.addCard(new Moxie());
-        BaseMod.addCard(new SelfSoothing());
-        BaseMod.addCard(new Irritation());
-        BaseMod.addCard(new SignatureNob());
-
-
-
-
-        BaseMod.addCard(new Bellow());
-        BaseMod.addCard(new Topheavy());
-        BaseMod.addCard(new BasicPower());
-        BaseMod.addCard(new BasicMetallicize());
-
-
-
-//        new AutoAdd("paparatto")
-//                .packageFilter(AbstractAvocadoCharacterCard.class)
-//                .packageFilter("paparatto.cards")
-//                .setDefaultSeen(true)
-//                .cards();
     }
 
     // ================ /ADD CARDS/ ===================

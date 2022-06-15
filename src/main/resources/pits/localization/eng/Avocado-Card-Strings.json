@@ -45,7 +45,7 @@
   },
   "AvocadoCharacter:Suck": {
     "NAME": "Suck",
-    "DESCRIPTION":  "Deal !D! damage. NL Heal !M! HP."
+    "DESCRIPTION":  "Deal !D! damage. NL Suck !M! HP."
   },
   "AvocadoCharacter:DoubleStrike": {
     "NAME": "Double Strike",
@@ -65,7 +65,7 @@
   },
   "AvocadoCharacter:Suction": {
     "NAME": "Suction",
-    "DESCRIPTION":  "Deal !D! damage. NL Heal !M! HP."
+    "DESCRIPTION":  "Deal !D! damage. NL Suck !M! HP."
   },
   "AvocadoCharacter:ExpirationDate": {
     "NAME": "Expiration Date",
@@ -102,7 +102,8 @@
   },
   "AvocadoCharacter:PerfectedSuck": {
     "NAME": "Perfected Suck",
-    "DESCRIPTION": "Deal !D! damage. NL Heal 2 HP. NL Deals !M! additional damage for ALL your cards that heal HP."
+    "DESCRIPTION": "Deal !D! damage. NL Suck !M! HP. NL Deals 3 additional damage for ALL your cards that heal HP.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Suck !M! HP. NL Deals 5 additional damage for ALL your cards that heal HP."
   },
   "AvocadoCharacter:OnePitWonder": {
     "NAME": "One Pit Wonder",
@@ -211,7 +212,7 @@
   },
   "AvocadoCharacter:EatScrap": {
     "NAME": "Eat Scrap",
-    "DESCRIPTION": "Heal !M! HP. Add a *Slimed to your hand. NL Exhaust."
+    "DESCRIPTION": "Heal !M! HP. Add a *Slimed into your hand. NL Exhaust."
   },
   "AvocadoCharacter:Encapsulate": {
     "NAME": "Encapsulate",
@@ -282,8 +283,8 @@
   },
   "AvocadoCharacter:FungalElixir": {
     "NAME": "Fungal Elixir",
-    "DESCRIPTION": "Reduce your next Vulnerable gain by 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Reduce your next Vulnerable gain by 1."
+    "DESCRIPTION": "Reduce your next Vulnerable gain by 2. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Innate. NL Reduce your next Vulnerable gain by 2. NL Exhaust"
   },
   "AvocadoCharacter:BasicDraw": {
     "NAME": "Basic Draw",
@@ -413,7 +414,15 @@
   },
   "AvocadoCharacter:Stumble": {
     "NAME": "Stumble",
-    "DESCRIPTION": "Reactionary: Deal !D! damage and gain !B! Block. NL Otherwise, deal !D! damage twice."
+    "DESCRIPTION": "React(Attack): Deal !D! damage and gain !B! Block. NL Otherwise, deal !D! damage twice."
+  },
+  "AvocadoCharacter:Jab": {
+    "NAME": "Jab",
+    "DESCRIPTION": "Deal !D! damage. NL If the last card you played this combat was an Attack, draw 2 cards."
+  },
+  "AvocadoCharacter:PerfectedSmash": {
+    "NAME": "Perfected Smash",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL Attacks."
   },
   "AvocadoCharacter:Irritation": {
     "NAME": "Irritation",
@@ -431,6 +440,10 @@
     "NAME": "Self Soothing",
     "DESCRIPTION": "Gain !B! Block. NL Gain 2 Weak. NL Shuffle this card into your draw pile."
   },
+  "AvocadoCharacter:Regenerate": {
+    "NAME": "Regenerate",
+    "DESCRIPTION": "Heals !M! HP more for each time you lose HP this combat. NL Heal 0 HP. NL Exhaust."
+  },
   "AvocadoCharacter:Bellow": {
     "NAME": "Bellow",
     "DESCRIPTION": "Whenever you gain a debuff, NL gain !M! Strength."
@@ -438,6 +451,10 @@
   "AvocadoCharacter:Topheavy": {
     "NAME": "Top-Heavy",
     "DESCRIPTION": "Gain !M! Strength. NL Whenever you receive unblocked attack damage, NL gain 1 Weak."
+  },
+  "AvocadoCharacter:Education": {
+    "NAME": "Education",
+    "DESCRIPTION": "Lose !M! Strength. NL Whenever you draw a skill, reduce its cost by 1 this combat."
   }
 
 }

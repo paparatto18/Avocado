@@ -2,25 +2,9 @@ package paparatto.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.utility.*;
-import com.megacrit.cardcrawl.actions.defect.*;
-import com.megacrit.cardcrawl.actions.unique.*;
-import com.megacrit.cardcrawl.actions.animations.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.helpers.*;
-import com.megacrit.cardcrawl.relics.*;
-import com.megacrit.cardcrawl.powers.*;
-import com.megacrit.cardcrawl.orbs.*;
-import com.megacrit.cardcrawl.vfx.combat.*;
 
-import paparatto.Avocado;
-import paparatto.cards.*;
 import paparatto.patches.*;
 
 public abstract class AbstractAvocadoCharacterCard extends CustomCard {

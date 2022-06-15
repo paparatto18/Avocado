@@ -85,23 +85,21 @@ public class SlimyShield extends AbstractAvocadoCharacterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int realBaseBlock = this.baseBlock;
         this.baseBlock = this.magicNumber * countCards();
         this.applyPowers();
-        this.baseBlock = realBaseBlock;
-        this.isBlockModified = this.block != this.baseBlock;
         act(new GainBlockAction(p,p, this.block));
     }
     
 
     public void applyPowers() {
-        int realBaseBlock = this.baseBlock;
-        this.baseBlock += this.magicNumber * countCards();
+        this.baseBlock = this.magicNumber * countCards();
         super.applyPowers();
-        this.baseBlock = realBaseBlock;
-        this.isBlockModified = this.block != this.baseBlock;
         this.rawDescription = "Gain !M! Block for ALL Status cards, including Exhaust pile. NL (Gain !B! Block.)";
         this.initializeDescription();
+    }
+
+    public void calculateCardDamage(AbstractMonster mo) {
+       this.applyPowers();
     }
 
 

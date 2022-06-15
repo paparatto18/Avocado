@@ -7,9 +7,11 @@ import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import paparatto.Avocado;
+import paparatto.actions.ModifyMagicAction;
 
 public class Suck extends AbstractAvocadoCharacterCard {
 
@@ -24,7 +26,7 @@ public class Suck extends AbstractAvocadoCharacterCard {
     public Suck() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseDamage = 7;
+        baseDamage = 8;
         damageUp = 2;
         baseMagicNumber = 2;
         magicNumberUp = 1;
@@ -34,8 +36,10 @@ public class Suck extends AbstractAvocadoCharacterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
+        act(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Avocado.AVOCADO_GREEN.cpy()), 0.1F));
+        act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         act(new HealAction(p, p, this.magicNumber));
-        act(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GREEN_RELIC_COLOR.cpy()), 0.1F));
+        act(new ModifyMagicAction(this.uuid, -1));
+
     }
 }

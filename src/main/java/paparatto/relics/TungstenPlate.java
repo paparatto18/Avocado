@@ -9,6 +9,7 @@ import java.util.Iterator;
 
 public class TungstenPlate extends CustomRelic {
     public static final String ID = "TungstenPlate";
+    public static Object onTrigger;
 
 
     public TungstenPlate() {
@@ -20,6 +21,10 @@ public class TungstenPlate extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
+
+    public void onTrigger() {
+        super.onTrigger();
+    }
 
     @Override
     public AbstractRelic makeCopy() { // always override this method to return a new instance of your relic

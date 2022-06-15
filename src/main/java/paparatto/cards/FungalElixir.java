@@ -26,6 +26,7 @@ public class FungalElixir extends AbstractAvocadoCharacterCard {
 
         baseMagicNumber = 1;
         magicNumber = baseMagicNumber;
+        this.exhaust = true;
 
     }
 
@@ -42,7 +43,7 @@ public class FungalElixir extends AbstractAvocadoCharacterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        act(new ApplyPowerAction(p,p, new FungalPower(p, 1), 1));
+        act(new ApplyPowerAction(p,p, new FungalPower(p, 2), 2));
 
     }
 }

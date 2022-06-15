@@ -40,7 +40,7 @@ public class NextTurnReclaimPower extends AbstractPower {
 
     }
 
-    public void onEnergyRecharge() {
+    public void atStartOfTurnPostDraw() {
         this.flash();
         this.addToBot(new RandomDiscardCopyAction(this.amount));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "NextTurnReclaimPower"));

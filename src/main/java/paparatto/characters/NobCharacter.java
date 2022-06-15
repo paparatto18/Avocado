@@ -34,6 +34,7 @@ import paparatto.cards.ParasiticShell;
 import paparatto.cards.Strike;
 import paparatto.patches.AbstractCardEnum;
 import paparatto.relics.PitOfFury;
+import paparatto.relics.RightHorn;
 import paparatto.relics.Shell;
 
 import java.util.ArrayList;
@@ -166,8 +167,8 @@ public class NobCharacter extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(PitOfFury.ID);
-        UnlockTracker.markRelicAsSeen(PitOfFury.ID);
+        retVal.add(RightHorn.ID);
+        UnlockTracker.markRelicAsSeen(RightHorn.ID);
 
         return retVal;
     }

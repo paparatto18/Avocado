@@ -44,10 +44,9 @@ public class ShellSmash extends AbstractAvocadoCharacterCard {
             int plate = (int) Math.floor(((float)AbstractDungeon.player.getPower("Plated Armor").amount) / 2);
             for (int i = 0; i < plate ; ++i) {
                 act(new PeelAction(p, this.magicNumber));
-                act(new DrawCardAction(1));
-                act(new GainEnergyAction(1));
-
             }
+            act(new DrawCardAction(plate));
+            act(new GainEnergyAction(plate));
         }
 
     }

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import paparatto.cards.Autophagia;
 
 public class RandomDiscardCopyAction extends AbstractGameAction {
 
@@ -36,8 +37,11 @@ public class RandomDiscardCopyAction extends AbstractGameAction {
             for (int i = 0; i < this.amount; ++i) {
                 AbstractCard card = p.discardPile.getRandomCard(AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
                 card.freeToPlayOnce = freeToPlayOnce;
-                this.addToBot(new MakeTempCardInHandAction(card));
-
+                if (card.cardID.equals("Autophagia")) {
+                    i--;
+                }else{
+                    this.addToBot(new MakeTempCardInHandAction(card));
+                }
             }
         }
 

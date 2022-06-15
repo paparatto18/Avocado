@@ -36,25 +36,11 @@ public class RAT extends AbstractAvocadoCharacterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new VFXAction(p, new VerticalAuraEffect(CardHelper.getColor(110.0f, 112.0f, 66.0f), p.hb.cX, p.hb.cY), 0.33F));
+        this.addToBot(new VFXAction(p, new VerticalAuraEffect(CardHelper.getColor(110.0f, 112.0f, 66.0f).cpy(), p.hb.cX, p.hb.cY), 0.33F));
         this.addToBot(new SFXAction("ATTACK_FIRE"));
         this.addToBot(new VFXAction(p, new BorderLongFlashEffect(Color.CHARTREUSE), 0.0F, true));
         this.addToBot(new VFXAction(new TextEffect(p.hb.cX, p.hb.cY, "RAT")));
-        boolean powerExists = false;
-        Iterator var4 = p.powers.iterator();
-
-        while(var4.hasNext()) {
-            AbstractPower pow = (AbstractPower)var4.next();
-            if (pow.ID.equals("Rat")) {
-                powerExists = true;
-                break;
-            }
-        }
-
-        if (!powerExists) {
-            this.addToBot(new ApplyPowerAction(p, p, new RatPower(p, this.upgraded)));
-
-        }
+        this.addToBot(new ApplyPowerAction(p, p, new RatPower(p, 1),1));
 
     }
 }

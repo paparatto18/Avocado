@@ -35,14 +35,26 @@
     ],
     "DESCRIPTION": "Adds a copy of a random card from your discard pile into your hand."
   },
-  "REACTIONARY": {
+  "SUCK": {
     "NAMES": [
-      "Reactionary:",
-      "reactionary:",
-      "Reactionary",
-      "reactionary"
+      "Suck",
+      "suck"
     ],
-    "DESCRIPTION": "Activate effect if the enemy intends to attack."
+    "DESCRIPTION": "Heal X HP and reduce this healing by 1 this combat."
+  },
+  "REACT": {
+    "NAMES": [
+      "React",
+      "react",
+      "react(",
+      "react(attack)",
+      "react(block)",
+      "react(buff)",
+      "react(debuff)",
+      "react(unknown)",
+      "react(stun)"
+    ],
+    "DESCRIPTION": "Activate effect if the enemy intends to do a certain action."
   }
 }
 

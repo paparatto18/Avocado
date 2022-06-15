@@ -37,8 +37,8 @@ public class AvocadoCharacter extends CustomPlayer {
     // =============== BASE STATS =================
 
     public static final int ENERGY_PER_TURN = 3;
-    public static final int STARTING_HP = 60;
-    public static final int MAX_HP = 60;
+    public static final int STARTING_HP = 69;
+    public static final int MAX_HP = 69;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
@@ -151,6 +151,91 @@ public class AvocadoCharacter extends CustomPlayer {
         retVal.add(DoubleStrike.ID);
         retVal.add(ParasiticShell.ID);
 
+
+        UnlockTracker.markCardAsSeen( Strike.ID);
+        UnlockTracker.markCardAsSeen( Defend.ID);
+
+        UnlockTracker.markCardAsSeen( DoubleStrike.ID);
+        UnlockTracker.markCardAsSeen( Fell.ID);
+        UnlockTracker.markCardAsSeen( Wither.ID);
+        UnlockTracker.markCardAsSeen( Suck.ID);
+        UnlockTracker.markCardAsSeen( RainOfPits.ID);
+        UnlockTracker.markCardAsSeen( FecklessWhirl.ID);
+        UnlockTracker.markCardAsSeen( PlateSnap.ID);
+        UnlockTracker.markCardAsSeen( Suction.ID);
+        UnlockTracker.markCardAsSeen( SquishyStrike.ID);
+        UnlockTracker.markCardAsSeen( ExpirationDate.ID);
+        UnlockTracker.markCardAsSeen( TendrilSwipe.ID);
+        UnlockTracker.markCardAsSeen( BGone.ID);
+        UnlockTracker.markCardAsSeen( Forge.ID);
+        UnlockTracker.markCardAsSeen( Toast.ID);
+        UnlockTracker.markCardAsSeen( PeelHook.ID);
+        UnlockTracker.markCardAsSeen( Extractor.ID);
+        UnlockTracker.markCardAsSeen( PitAndRun.ID);
+        UnlockTracker.markCardAsSeen( PerfectedSuck.ID);
+        UnlockTracker.markCardAsSeen( OnePitWonder.ID);
+        UnlockTracker.markCardAsSeen( HeavySlam.ID);
+        UnlockTracker.markCardAsSeen( Autophagia.ID);
+        UnlockTracker.markCardAsSeen( Scavenger.ID);
+        UnlockTracker.markCardAsSeen( ArmedPit.ID);
+        UnlockTracker.markCardAsSeen( Splinter.ID);
+        UnlockTracker.markCardAsSeen( PitStorm.ID);
+
+        UnlockTracker.markCardAsSeen( ParasiticShell.ID);
+        UnlockTracker.markCardAsSeen( Plateheaded.ID);
+        UnlockTracker.markCardAsSeen( Suckamid.ID);
+        UnlockTracker.markCardAsSeen( EthyleneGas.ID);
+        UnlockTracker.markCardAsSeen( PeelItOff.ID);
+        UnlockTracker.markCardAsSeen( Overguac.ID);
+        UnlockTracker.markCardAsSeen( Constrict.ID);
+        UnlockTracker.markCardAsSeen( EatShell.ID);
+        UnlockTracker.markCardAsSeen( Harden.ID);
+        UnlockTracker.markCardAsSeen( Overblock.ID);
+        UnlockTracker.markCardAsSeen( Wrap.ID);
+        UnlockTracker.markCardAsSeen( PittedArmor.ID);
+        UnlockTracker.markCardAsSeen( SowDoubt.ID);
+        UnlockTracker.markCardAsSeen( FlashFreeze.ID);
+        UnlockTracker.markCardAsSeen( AcridPuke.ID);
+        UnlockTracker.markCardAsSeen( Apoptosis.ID);
+        UnlockTracker.markCardAsSeen( Compost.ID);
+        UnlockTracker.markCardAsSeen( Necrosis.ID);
+        UnlockTracker.markCardAsSeen( EatScrap.ID);
+        UnlockTracker.markCardAsSeen( Encapsulate.ID);
+        UnlockTracker.markCardAsSeen( BagOfPits.ID);
+        UnlockTracker.markCardAsSeen( Phosphorylation.ID);
+        UnlockTracker.markCardAsSeen( Phototropism.ID);
+        UnlockTracker.markCardAsSeen( Suffocate.ID);
+        UnlockTracker.markCardAsSeen( FleshBarrier.ID);
+        UnlockTracker.markCardAsSeen( SlimyShield.ID);
+        UnlockTracker.markCardAsSeen( Reclaim.ID);
+        UnlockTracker.markCardAsSeen( ShellSmash.ID);
+        UnlockTracker.markCardAsSeen( Rummage.ID);
+        UnlockTracker.markCardAsSeen( Spoils.ID);
+        UnlockTracker.markCardAsSeen( Lunacy.ID);
+        UnlockTracker.markCardAsSeen( Toxoplasmosis.ID);
+        UnlockTracker.markCardAsSeen( FungalElixir.ID);
+
+        UnlockTracker.markCardAsSeen( BalancedDiet.ID);
+        UnlockTracker.markCardAsSeen( Overripe.ID);
+        UnlockTracker.markCardAsSeen( Growth.ID);
+        UnlockTracker.markCardAsSeen( MucousEmbrace.ID);
+        UnlockTracker.markCardAsSeen( Baseplate.ID);
+        UnlockTracker.markCardAsSeen( Reabsorb.ID);
+        UnlockTracker.markCardAsSeen( Goorruption.ID);
+        UnlockTracker.markCardAsSeen( Ratrops.ID);
+        UnlockTracker.markCardAsSeen( Electroplating.ID);
+        UnlockTracker.markCardAsSeen( Strangulation.ID);
+        UnlockTracker.markCardAsSeen( ParasiticForm.ID);
+        UnlockTracker.markCardAsSeen( Savagery.ID);
+        UnlockTracker.markCardAsSeen( Ensnare.ID);
+        UnlockTracker.markCardAsSeen( Recombination.ID);
+        UnlockTracker.markCardAsSeen( PeelNoPain.ID);
+        UnlockTracker.markCardAsSeen( Shrapnel.ID);
+        UnlockTracker.markCardAsSeen( RAT.ID);
+
+        UnlockTracker.markCardAsSeen( GrowChoice.ID);
+        UnlockTracker.markCardAsSeen( BiteChoice.ID);
+
         return retVal;
     }
 
@@ -182,7 +267,7 @@ public class AvocadoCharacter extends CustomPlayer {
     // Ascension 14 or higher. (ironclad loses 5, defect and silent lose 4 hp respectively)
     @Override
     public int getAscensionMaxHPLoss() {
-        return 0;
+        return 4;
     }
 
     // Should return the card color enum to be associated with your character.
@@ -194,7 +279,7 @@ public class AvocadoCharacter extends CustomPlayer {
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return paparatto.Avocado.AVOCADO_GREEN;
+        return paparatto.Avocado.AVOCADO_GREEN.cpy();
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -230,13 +315,13 @@ public class AvocadoCharacter extends CustomPlayer {
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return paparatto.Avocado.AVOCADO_GREEN;
+        return paparatto.Avocado.AVOCADO_GREEN.cpy();
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
-    public Color getSlashAttackColor() { return paparatto.Avocado.AVOCADO_GREEN; }
+    public Color getSlashAttackColor() { return paparatto.Avocado.AVOCADO_GREEN.cpy(); }
 
     // Should return an AttackEffect array of any size greater than 0. These effects
     // will be played in sequence as your character's finishing combo on the heart.
