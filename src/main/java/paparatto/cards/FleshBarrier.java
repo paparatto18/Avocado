@@ -40,6 +40,9 @@ public class FleshBarrier extends AbstractAvocadoCharacterCard {
         }
         int realBaseBlock = this.baseBlock;
         this.baseBlock -= this.magicNumber * plate;
+        if (this.baseBlock < 0) {
+            this.baseBlock = 0;
+        }
         super.applyPowers();
         this.baseBlock = realBaseBlock;
         this.isBlockModified = this.block != this.baseBlock;
@@ -54,6 +57,9 @@ public class FleshBarrier extends AbstractAvocadoCharacterCard {
         }
         int realBaseBlock = this.baseBlock;
         this.baseBlock -= this.magicNumber * plate;
+        if (this.baseBlock < 0) {
+            this.baseBlock = 0;
+        }
         super.applyPowers();
         this.baseBlock = realBaseBlock;
         this.isBlockModified = this.block != this.baseBlock;

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import paparatto.Avocado;
 
@@ -25,7 +26,7 @@ public class Fell extends AbstractAvocadoCharacterCard {
 
         baseDamage = 21;
         damageUp = 0;
-        baseMagicNumber = 1;
+        baseMagicNumber = 2;
         magicNumberUp = 1;
         magicNumber = baseMagicNumber;
         isInnate = true;
@@ -35,7 +36,7 @@ public class Fell extends AbstractAvocadoCharacterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
          act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-         act(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
+         act(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
     }
 }
 

@@ -22,12 +22,15 @@ public class Harden extends AbstractAvocadoCharacterCard {
 
         baseBlock = 7;
         blockUp = 3;
+        baseMagicNumber = 3;
+        magicNumberUp = 1;
+        magicNumber = baseMagicNumber;
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         act(new GainBlockAction(p, p, this.block));
-        act(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 3), 3));
+        act(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
     }
 }

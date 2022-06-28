@@ -61,6 +61,8 @@ public class SturdyCarapace extends CustomRelic {
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
 
+
+
     public boolean canSpawn() {
         return AbstractDungeon.player.hasRelic(Shell.ID);
     }

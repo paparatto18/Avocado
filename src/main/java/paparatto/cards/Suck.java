@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import paparatto.Avocado;
 import paparatto.actions.ModifyMagicAction;
+import paparatto.vfx.TextEffect;
 
 public class Suck extends AbstractAvocadoCharacterCard {
 
@@ -37,6 +38,7 @@ public class Suck extends AbstractAvocadoCharacterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         act(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Avocado.AVOCADO_GREEN.cpy()), 0.1F));
+        this.addToBot(new VFXAction(new TextEffect(m.hb.cX, m.hb.cY, "sucked", 0.25f)));
         act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         act(new HealAction(p, p, this.magicNumber));
         act(new ModifyMagicAction(this.uuid, -1));

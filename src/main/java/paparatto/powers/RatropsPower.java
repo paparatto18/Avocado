@@ -41,7 +41,7 @@ public class RatropsPower extends AbstractPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
             this.flash();
-            this.addToTop(new ApplyPowerAction(info.owner, this.owner, new VulnerablePower(info.owner, this.amount, true), this.amount+1));
+            this.addToTop(new ApplyPowerAction(info.owner, this.owner, new VulnerablePower(info.owner, this.amount, true), this.amount));
         }
 
         return damageAmount;

@@ -24,7 +24,7 @@
 		"NAME": "Mark of Nausea",
 		"FLAVOR": "This brand is used to signify parasites who have mastered nausea.",
 		"DESCRIPTIONS": [
-			"Gain #b1 Energy at the start of your turn. At the start of combat, shuffle #b3 #rSlimeds into your draw pile."
+			"Gain #b1 Energy at the start of your turn. At the start of combat, shuffle #b3 #gSlimeds into your draw pile."
 		]
 	},
 	"SuckDummy": {

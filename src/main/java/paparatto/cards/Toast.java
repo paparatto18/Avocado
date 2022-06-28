@@ -24,7 +24,7 @@ public class Toast extends AbstractAvocadoCharacterCard {
     public Toast() {
         super(ID, COST, TYPE, RARITY, TARGET);
 
-        baseDamage = 7;
+        baseDamage = 8;
         damageUp = 2;
         this.cardsToPreview = new Burn();
 

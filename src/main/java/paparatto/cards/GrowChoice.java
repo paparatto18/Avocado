@@ -37,7 +37,7 @@ public class GrowChoice extends AbstractAvocadoCharacterCard {
         AbstractPlayer p = AbstractDungeon.player;
         this.addToBot(new VFXAction(new BorderLongFlashEffect(Color.FIREBRICK.cpy(), true)));
         this.addToBot(new VFXAction(p, new InflameEffect(p), 0.1F));
-        this.addToBot(new VFXAction(new TextEffect(p.hb.cX, p.hb.cY, "BIG")));
+        this.addToBot(new VFXAction(new TextEffect(p.hb.cX, p.hb.cY, "BIG",1.0f)));
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
     }
 

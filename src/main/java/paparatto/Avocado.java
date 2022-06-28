@@ -41,6 +41,7 @@ import java.lang.reflect.Type;
 import java.util.Map;
 
 import com.google.gson.reflect.TypeToken;
+import paparatto.potions.LiquidReclamation;
 import paparatto.relics.*;
 
 @SpireInitializer
@@ -230,7 +231,7 @@ public class Avocado implements
 
         BaseMod.addCard(new DoubleStrike());
         BaseMod.addCard(new Fell());
-        BaseMod.addCard(new Wither());
+//        BaseMod.addCard(new Wither());
         BaseMod.addCard(new Suck());
         BaseMod.addCard(new RainOfPits());
         BaseMod.addCard(new FecklessWhirl());
@@ -275,7 +276,7 @@ public class Avocado implements
         BaseMod.addCard(new Necrosis());
         BaseMod.addCard(new EatScrap());
         BaseMod.addCard(new Encapsulate());
-        BaseMod.addCard(new BagOfPits());
+//        BaseMod.addCard(new BagOfPits());
         BaseMod.addCard(new Phosphorylation());
         BaseMod.addCard(new Phototropism());
         BaseMod.addCard(new Suffocate());
@@ -288,6 +289,7 @@ public class Avocado implements
         BaseMod.addCard(new Lunacy());
         BaseMod.addCard(new Toxoplasmosis());
         BaseMod.addCard(new FungalElixir());
+        BaseMod.addCard(new Eau());
 
 
 
@@ -304,7 +306,7 @@ public class Avocado implements
         BaseMod.addCard(new ParasiticForm());
         BaseMod.addCard(new Savagery());
         BaseMod.addCard(new Ensnare());
-        BaseMod.addCard(new Recombination());
+//        BaseMod.addCard(new Recombination());
         BaseMod.addCard(new PeelNoPain());
         BaseMod.addCard(new Shrapnel());
         BaseMod.addCard(new RAT());

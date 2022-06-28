@@ -44,7 +44,7 @@ public class Suction extends AbstractAvocadoCharacterCard {
             this.addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, Avocado.AVOCADO_GREEN.cpy())));
         }
         this.addToBot(new WaitAction(0.8F));
-        this.addToBot(new VFXAction(new TextEffect(m.hb.cX, m.hb.cY, "SUCKED")));
+        this.addToBot(new VFXAction(new TextEffect(m.hb.cX, m.hb.cY, "SUCKED", 1.0f)));
         act(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         act(new HealAction(p, p, this.magicNumber));
         act(new ModifyMagicAction(this.uuid, -1));

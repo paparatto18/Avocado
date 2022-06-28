@@ -52,6 +52,7 @@ public class Splinter extends AbstractAvocadoCharacterCard {
 
     public void applyPowers() {
         if (AbstractDungeon.player.hasPower("Plated Armor")) {
+            super.applyPowers();
             int plate = (int) Math.floor(((float) AbstractDungeon.player.getPower("Plated Armor").amount) / 2);
             if (plate == 1) {
                 this.rawDescription = "Peel 1 and deal !D! damage for each 2 *Plated *Armor you have. (" + plate + " time) NL Exhaust.";

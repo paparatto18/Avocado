@@ -11,13 +11,15 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class TextEffect extends AbstractGameEffect {
+    private final float textScale;
     private StringBuilder sBuilder = new StringBuilder("");
     private String targetString;
     private int index;
     private float x;
     private float y;
 
-    public TextEffect(float x, float y, String text) {
+    public TextEffect(float x, float y, String text, float textScale) {
+        this.textScale = textScale;
         this.targetString = text;
         this.index = 0;
         this.sBuilder.setLength(0);
@@ -45,9 +47,9 @@ public class TextEffect extends AbstractGameEffect {
     }
 
     public void render(SpriteBatch sb) {
-        FontHelper.renderFontCentered(sb, FontHelper.SCP_cardTitleFont_small, this.targetString, this.x, this.y, this.color, 2.5F - this.duration / 4.0F + MathUtils.random(0.05F));
+        FontHelper.renderFontCentered(sb, FontHelper.SCP_cardTitleFont_small, this.targetString, this.x, this.y, this.color,this.textScale * (2.5F - this.duration / 4.0F + MathUtils.random(0.05F)));
         sb.setBlendFunction(770, 1);
-        FontHelper.renderFontCentered(sb, FontHelper.SCP_cardTitleFont_small, this.targetString, this.x, this.y, this.color, 0.05F + (2.5F - this.duration / 4.0F) + MathUtils.random(0.05F));
+        FontHelper.renderFontCentered(sb, FontHelper.SCP_cardTitleFont_small, this.targetString, this.x, this.y, this.color,this.textScale * (0.05F + (2.5F - this.duration / 4.0F) + MathUtils.random(0.05F)));
         sb.setBlendFunction(770, 771);
     }
 

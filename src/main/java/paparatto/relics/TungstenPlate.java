@@ -13,7 +13,7 @@ public class TungstenPlate extends CustomRelic {
 
 
     public TungstenPlate() {
-        super(ID, new Texture("pits/images/relics/TungstenPlate.png"), new Texture("pits/images/relics/outline/TungstenPlate.png"), RelicTier.UNCOMMON, LandingSound.HEAVY);
+        super(ID, new Texture("pits/images/relics/TungstenPlate.png"), new Texture("pits/images/relics/outline/TungstenPlate.png"), RelicTier.RARE, LandingSound.HEAVY);
     }
 
     @Override

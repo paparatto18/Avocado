@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import paparatto.Avocado;
 import paparatto.actions.ModifyMagicAction;
+import paparatto.vfx.TextEffect;
 
 import java.util.Iterator;
 
@@ -80,6 +81,7 @@ public class PerfectedSuck extends AbstractAvocadoCharacterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         act(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Avocado.AVOCADO_GREEN.cpy()), 0.1F));
+        this.addToBot(new VFXAction(new TextEffect(m.hb.cX, m.hb.cY, "Sucked", 0.33f)));
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         act(new HealAction(p, p, this.magicNumber));
         act(new ModifyMagicAction(this.uuid, -1));

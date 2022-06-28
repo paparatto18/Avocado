@@ -37,7 +37,7 @@ public class BiteChoice extends AbstractAvocadoCharacterCard {
         AbstractPlayer p = AbstractDungeon.player;
         this.addToBot(new VFXAction(new BorderFlashEffect(Color.RED.cpy(), true)));
         this.addToBot(new VFXAction(p, new MiracleEffect(Color.FIREBRICK, Color.RED.cpy(), "BLOCK_GAIN_1"), 0.1F));
-        this.addToBot(new VFXAction(new TextEffect(p.hb.cX, p.hb.cY, "EAT")));
+        this.addToBot(new VFXAction(new TextEffect(p.hb.cX, p.hb.cY, "EAT", 1.0f)));
         this.addToBot(new MakeTempCardInHandAction(new Bite(), 1));
     }
 

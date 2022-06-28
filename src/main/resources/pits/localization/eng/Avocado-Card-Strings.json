@@ -29,7 +29,7 @@
   },
   "AvocadoCharacter:Fell": {
     "NAME": "Fell",
-    "DESCRIPTION":  "Innate. NL Deal !D! damage. NL Apply !M! Weak."
+    "DESCRIPTION":  "Innate. NL Deal !D! damage. NL Apply !M! Vulnerable."
   },
   "AvocadoCharacter:Wither": {
     "NAME": "Wither",
@@ -85,7 +85,7 @@
   },
   "AvocadoCharacter:Toast": {
     "NAME": "Toast",
-    "DESCRIPTION": "Deal !D! damage twice. NL Add a *Burn to your hand"
+    "DESCRIPTION": "Deal !D! damage twice. NL Add a *Burn into your hand."
   },
   "AvocadoCharacter:PeelHook": {
     "NAME": "Peel Hook",
@@ -131,8 +131,8 @@
   },
   "AvocadoCharacter:PitStorm": {
     "NAME": "Pit Storm",
-    "DESCRIPTION": "Deal !D! damage twice NL X times",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage twice NL X+1 times"
+    "DESCRIPTION": "Deal !D! damage twice NL X times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage twice NL X+1 times."
   },
   "AvocadoCharacter:Growth": {
     "NAME": "Growth",
@@ -144,8 +144,8 @@
   },
   "AvocadoCharacter:Plateheaded": {
     "NAME": "Plateheaded",
-    "DESCRIPTION":  "Gain 1 *Plated *Armor. Draw !M! Card",
-    "UPGRADE_DESCRIPTION":  "Gain 1 *Plated *Armor. Draw !M! Cards"
+    "DESCRIPTION":  "Gain 1 *Plated *Armor. Draw !M! Card.",
+    "UPGRADE_DESCRIPTION":  "Gain 1 *Plated *Armor. Draw !M! Cards."
   },
   "AvocadoCharacter:Suckamid": {
     "NAME": "Suckamid",
@@ -161,11 +161,11 @@
   },
   "AvocadoCharacter:EatShell": {
     "NAME": "Plated Farmer",
-    "DESCRIPTION": "Peel ALL: NL Gain Regen equal to *Plated *Armor lost. Exhaust"
+    "DESCRIPTION": "Peel ALL: NL Gain Regen equal to *Plated *Armor lost. Exhaust."
   },
   "AvocadoCharacter:Harden": {
     "NAME": "Harden",
-    "DESCRIPTION": "Gain !B! Block. Gain 3 *Plated *Armor."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! *Plated *Armor."
   },
   "AvocadoCharacter:Overblock": {
     "NAME": "Overblock",
@@ -181,12 +181,12 @@
   },
   "AvocadoCharacter:Wrap": {
     "NAME": "Wrap",
-    "DESCRIPTION": "Apply !M! Constricted to ALL enemies X Times. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Apply !M! Constricted to ALL enemies X+1 Times. NL Exhaust"
+    "DESCRIPTION": "Apply !M! Constricted to ALL enemies X Times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Constricted to ALL enemies X+1 Times. NL Exhaust."
   },
   "AvocadoCharacter:SowDoubt": {
     "NAME": "Sow Doubt",
-    "DESCRIPTION":  "Gain !B! Block. Apply !M! Weak."
+    "DESCRIPTION":  "Gain !B! Block. NL Apply !M! Weak."
   },
   "AvocadoCharacter:FlashFreeze": {
     "NAME": "Flash Freeze",
@@ -194,7 +194,7 @@
   },
   "AvocadoCharacter:AcridPuke": {
     "NAME": "Acrid Puke",
-    "DESCRIPTION": "Apply !M! Weak and NL !M! Vulnerable to ALL Enemies. Add a *Slimed to your hand. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and NL !M! Vulnerable to ALL Enemies. Add a *Slimed into your hand. NL Exhaust."
   },
   "AvocadoCharacter:Apoptosis": {
     "NAME": "Apoptosis",
@@ -216,7 +216,7 @@
   },
   "AvocadoCharacter:Encapsulate": {
     "NAME": "Encapsulate",
-    "DESCRIPTION": "Apply !M! *Plated *Armor. Apply 3 Constricted !M! times."
+    "DESCRIPTION": "Apply !M! *Plated *Armor. NL Apply 3 Constricted !M! times."
   },
   "AvocadoCharacter:StunSpore": {
     "NAME": "Stun Spore",
@@ -274,8 +274,8 @@
   },
   "AvocadoCharacter:Lunacy": {
     "NAME": "Lunacy",
-    "DESCRIPTION": "At the start of your next X turns, reduce the cost of a random card in your hand to 0 this combat. Exhaust ",
-    "UPGRADE_DESCRIPTION": "At the start of your next X+1 turns, reduce the cost of a random card in your hand to 0 this combat. Exhaust "
+    "DESCRIPTION": "At the start of your next X turns, reduce the cost of a random card in your hand to 0 this combat. Exhaust.",
+    "UPGRADE_DESCRIPTION": "At the start of your next X+1 turns, reduce the cost of a random card in your hand to 0 this combat. Exhaust."
   },
   "AvocadoCharacter:Toxoplasmosis": {
     "NAME": "Toxoplasmosis",
@@ -283,8 +283,13 @@
   },
   "AvocadoCharacter:FungalElixir": {
     "NAME": "Fungal Elixir",
-    "DESCRIPTION": "Reduce your next Vulnerable gain by 2. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Innate. NL Reduce your next Vulnerable gain by 2. NL Exhaust"
+    "DESCRIPTION": "Reduce your next Vulnerable gain by 2. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Reduce your next Vulnerable gain by 2. NL Exhaust."
+  },
+  "AvocadoCharacter:Eau": {
+    "NAME": "Eau d'Avocat",
+    "DESCRIPTION": "Obtain an Essence of Steel. NL Exhaust."
+
   },
   "AvocadoCharacter:BasicDraw": {
     "NAME": "Basic Draw",
@@ -423,6 +428,10 @@
   "AvocadoCharacter:PerfectedSmash": {
     "NAME": "Perfected Smash",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL Attacks."
+  },
+  "AvocadoCharacter:RitualFlame": {
+    "NAME": "Ritual Flame",
+    "DESCRIPTION": "Deal !D! Damage. NL Gain !M! *Strength. NL If Fatal, increase this gain by 1. NL Exhaust."
   },
   "AvocadoCharacter:Irritation": {
     "NAME": "Irritation",

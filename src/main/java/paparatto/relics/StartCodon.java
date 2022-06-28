@@ -40,7 +40,9 @@ public class StartCodon extends CustomRelic {
                     ++count;
                 }
             }
-            this.flash();
+            if (count >0) {
+                this.flash();
+            }
             this.addToTop(new GainEnergyAction(count));
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             this.firstTurn = false;

@@ -2,6 +2,7 @@ package paparatto.cards;
 
 import com.megacrit.cardcrawl.actions.unique.SkewerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import paparatto.Avocado;
 import paparatto.actions.PitStormAction;
@@ -26,4 +27,5 @@ public class PitStorm extends AbstractAvocadoCharacterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new PitStormAction(p, m, this.upgraded, this.damage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
     }
+
 }

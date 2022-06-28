@@ -10,7 +10,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -28,6 +30,7 @@ import com.badlogic.gdx.math.*;
 import paparatto.relics.Shell;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static paparatto.Avocado.*;
 
@@ -133,12 +136,16 @@ public class AvocadoCharacter extends CustomPlayer {
                 getStartingDeck(), false);
     }
 
+
+
     // Starting Deck
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
 
         logger.info("Begin loading starter Deck Strings");
+
+
 
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
@@ -150,6 +157,7 @@ public class AvocadoCharacter extends CustomPlayer {
         retVal.add(Defend.ID);
         retVal.add(DoubleStrike.ID);
         retVal.add(ParasiticShell.ID);
+
 
 
         UnlockTracker.markCardAsSeen( Strike.ID);
@@ -214,6 +222,7 @@ public class AvocadoCharacter extends CustomPlayer {
         UnlockTracker.markCardAsSeen( Lunacy.ID);
         UnlockTracker.markCardAsSeen( Toxoplasmosis.ID);
         UnlockTracker.markCardAsSeen( FungalElixir.ID);
+        UnlockTracker.markCardAsSeen( Eau.ID);
 
         UnlockTracker.markCardAsSeen( BalancedDiet.ID);
         UnlockTracker.markCardAsSeen( Overripe.ID);
@@ -361,5 +370,18 @@ public class AvocadoCharacter extends CustomPlayer {
         sr.draw(CardCrawlGame.psb, this.skeleton);
         CardCrawlGame.psb.end();
         sb.begin();
+    }
+    @Override
+    public Texture getCutsceneBg() {
+        return ImageMaster.loadImage("pits/images/scenes/avocadoBg.png");
+    }
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();
+        panels.add(new CutscenePanel("pits/images/scenes/avocado1.png", "ATTACK_HEAVY"));
+        panels.add(new CutscenePanel("pits/images/scenes/avocado2.png"));
+        panels.add(new CutscenePanel("pits/images/scenes/avocado3.png"));
+        return panels;
     }
 }

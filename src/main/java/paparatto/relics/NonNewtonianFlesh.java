@@ -20,7 +20,7 @@ public class NonNewtonianFlesh extends CustomRelic {
     private int blockAmount;
 
     public NonNewtonianFlesh() {
-        super(ID, new Texture("pits/images/relics/Flesh.png"),new Texture("pits/images/relics/outline/Flesh.png"), RelicTier.RARE, LandingSound.FLAT);
+        super(ID, new Texture("pits/images/relics/Flesh.png"),new Texture("pits/images/relics/outline/Flesh.png"), RelicTier.UNCOMMON, LandingSound.FLAT);
     }
 
     @Override
@@ -49,6 +49,9 @@ public class NonNewtonianFlesh extends CustomRelic {
         }
 
     }
+
+
+    public void onVictory() {this.pulse = false;}
 
     @Override
     public AbstractRelic makeCopy() { // always override this method to return a new instance of your relic

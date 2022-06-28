@@ -21,6 +21,7 @@ public class ParasiticForm extends AbstractAvocadoCharacterCard {
         super(ID, COST, TYPE, RARITY, TARGET);
         isEthereal = true;
 
+
     }
 
     @Override
